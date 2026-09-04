@@ -5897,6 +5897,10 @@ input:focus-visible {
 }
 .header-three-button {
   margin-block-end: -6px;
+  white-space: nowrap !important;
+}
+.header-three-button a {
+  white-space: nowrap !important;
 }
 .header-three-menu button {
   box-shadow:
@@ -10072,6 +10076,11 @@ body.tw-magic-cursor #magic-cursor {
    ========================================================================== */
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
 }
 
 #home,
@@ -10086,6 +10095,7 @@ html {
 
 #smooth-wrapper {
   overflow: visible !important;
+  overflow-x: clip !important;
   height: auto !important;
   width: 100% !important;
   position: relative !important;
@@ -10093,8 +10103,55 @@ html {
 
 #smooth-content {
   overflow: visible !important;
+  overflow-x: clip !important;
   width: 100% !important;
   transform: none !important;
+}
+
+.banner-three-area,
+.marquee,
+.marquee-area {
+  overflow: hidden !important;
+}
+
+.banner-three-line-shape {
+  max-width: 100vw;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.feature-three-single {
+  transition: background 0.3s ease, padding 0.3s ease;
+}
+
+.feature-three-single:hover {
+  background: rgba(249, 85, 36, 0.04);
+  padding-inline: 12px;
+  border-radius: 8px;
+}
+
+.feature-three-single:hover .feature-three-text.text-white {
+  color: var(--main-two-600, #f95524) !important;
+}
+
+.footer-three-back-to-top {
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.footer-three-back-to-top:hover {
+  transform: translateY(-8px) scale(1.06) !important;
+  box-shadow: 0 12px 32px rgba(249, 85, 36, 0.45) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ==========================================================================

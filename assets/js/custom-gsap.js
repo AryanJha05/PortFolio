@@ -45,25 +45,30 @@
           $(".tw-header-side-menu").slideUp();
         }
 
-        // Calculate target scroll position with fixed header offset
-        var headerOffset = 90;
-        var targetPosition = target.offset().top - headerOffset;
-        if (targetPosition < 0) targetPosition = 0;
+        // Calculate target scroll position with fixed header offset (top: 0 for #home)
+        var targetPosition = 0;
+        if (href !== "#home") {
+          var headerOffset = 90;
+          targetPosition = Math.max(
+            0,
+            target[0].getBoundingClientRect().top + window.pageYOffset - headerOffset
+          );
+        }
 
-        // Smoothly animate scroll without page reload
-        $("html, body").stop().animate(
-          {
-            scrollTop: targetPosition,
-          },
-          600,
-          "swing",
-          function () {
-            // Update URL hash cleanly without jumping or reloading
-            if (window.history && window.history.pushState) {
-              window.history.pushState(null, null, href);
-            }
-          }
-        );
+        // Smoothly scroll to target
+        try {
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth"
+          });
+        } catch (e) {
+          window.scrollTo(0, targetPosition);
+        }
+
+        // Update URL hash cleanly without jumping or reloading
+        if (window.history && window.history.pushState) {
+          window.history.pushState(null, null, href);
+        }
       }
     });
   }
