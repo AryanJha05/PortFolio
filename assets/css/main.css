@@ -10190,4 +10190,107 @@ body {
   }
 }
 
+/* ==================== Functional Contact Section Styles ==================== */
+.footer-three-form .form-label {
+  font-size: 0.9375rem;
+  letter-spacing: 0.02em;
+  color: #ffffff !important;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.footer-three-form .form-control {
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.footer-three-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.45) !important;
+  opacity: 1 !important;
+}
+
+.footer-three-form .form-control:focus {
+  border-color: var(--color-main-600, #e6533c) !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 0 0 3px rgba(230, 83, 60, 0.25) !important;
+  outline: none !important;
+  color: #ffffff !important;
+}
+
+.footer-three-form .form-control.is-invalid {
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.22) !important;
+}
+
+.footer-three-form .form-control.is-valid {
+  border-color: #22c55e !important;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2) !important;
+}
+
+.contact-field-error {
+  color: #f87171 !important;
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+  font-weight: 500;
+  display: block;
+}
+
+.contact-field-error.d-none {
+  display: none !important;
+}
+
+#contact-submit-btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  position: relative;
+  transition: transform 0.2s ease, background-color 0.25s ease, color 0.25s ease, opacity 0.2s ease;
+}
+
+#contact-submit-btn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+#contact-submit-btn:focus-visible {
+  outline: 3px solid #ffffff !important;
+  outline-offset: 2px;
+}
+
+#contact-status-alert {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+#contact-status-alert.alert-success {
+  background: rgba(20, 83, 45, 0.25) !important;
+  border: 1px solid rgba(74, 222, 128, 0.35) !important;
+  color: #f1f5f9 !important;
+}
+
+#contact-status-alert.alert-danger {
+  background: rgba(127, 29, 29, 0.25) !important;
+  border: 1px solid rgba(248, 113, 113, 0.35) !important;
+  color: #fef2f2 !important;
+}
+
+@media (max-width: 575px) {
+  .footer-three-form textarea {
+    min-height: 120px !important;
+  }
+  #contact-submit-btn {
+    font-size: 1.1rem !important;
+    padding-block: 12px !important;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -325,4 +325,170 @@
 
     initRipples();
   });
+
+  ////////////////////////////////////////////////////
+  // 15. Functional Contact Form with Validation & Mailto Fallback
+  $(document).ready(function () {
+    const $contactForm = $("#contact-form");
+    if (!$contactForm.length) return;
+
+    const $nameInput = $("#contact-name");
+    const $emailInput = $("#contact-email");
+    const $subjectInput = $("#contact-subject");
+    const $messageInput = $("#contact-message");
+    const $submitBtn = $("#contact-submit-btn");
+    const $btnSpinner = $submitBtn.find(".contact-btn-spinner");
+    const $btnText = $submitBtn.find(".contact-btn-text");
+    const $statusAlert = $("#contact-status-alert");
+
+    // Standard RFC-compliant email regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+    function validateField($input, isValid, errorSelector, customMsg) {
+      const $err = $(errorSelector);
+      if (!isValid) {
+        $input.addClass("is-invalid").removeClass("is-valid");
+        $input.attr("aria-invalid", "true");
+        if (customMsg) {
+          $err.text(customMsg);
+        }
+        $err.removeClass("d-none");
+        return false;
+      } else {
+        $input.removeClass("is-invalid").addClass("is-valid");
+        $input.attr("aria-invalid", "false");
+        $err.addClass("d-none");
+        return true;
+      }
+    }
+
+    // Realtime validation on user typing/blur after first submit
+    $nameInput.on("input blur", function () {
+      if ($contactForm.data("submitted")) {
+        validateField($nameInput, $.trim($nameInput.val()).length >= 2, "#contact-name-error");
+      }
+    });
+
+    $emailInput.on("input blur", function () {
+      if ($contactForm.data("submitted")) {
+        const val = $.trim($emailInput.val());
+        validateField($emailInput, emailRegex.test(val), "#contact-email-error");
+      }
+    });
+
+    $subjectInput.on("input blur", function () {
+      if ($contactForm.data("submitted")) {
+        validateField($subjectInput, $.trim($subjectInput.val()).length >= 2, "#contact-subject-error");
+      }
+    });
+
+    $messageInput.on("input blur", function () {
+      if ($contactForm.data("submitted")) {
+        validateField($messageInput, $.trim($messageInput.val()).length >= 5, "#contact-message-error");
+      }
+    });
+
+    $contactForm.on("submit", function (e) {
+      e.preventDefault();
+      $contactForm.data("submitted", true);
+
+      const nameVal = $.trim($nameInput.val());
+      const emailVal = $.trim($emailInput.val());
+      const subjectVal = $.trim($subjectInput.val());
+      const messageVal = $.trim($messageInput.val());
+
+      const isNameValid = validateField(
+        $nameInput,
+        nameVal.length >= 2,
+        "#contact-name-error",
+        "Please enter your name (at least 2 characters)."
+      );
+      const isEmailValid = validateField(
+        $emailInput,
+        emailRegex.test(emailVal),
+        "#contact-email-error",
+        "Please enter a valid email address."
+      );
+      const isSubjectValid = validateField(
+        $subjectInput,
+        subjectVal.length >= 2,
+        "#contact-subject-error",
+        "Please enter a subject (at least 2 characters)."
+      );
+      const isMessageValid = validateField(
+        $messageInput,
+        messageVal.length >= 5,
+        "#contact-message-error",
+        "Please enter your message (at least 5 characters)."
+      );
+
+      if (!isNameValid || !isEmailValid || !isSubjectValid || !isMessageValid) {
+        $statusAlert
+          .removeClass("d-none alert-success")
+          .addClass("alert-danger")
+          .html(
+            '<div class="d-flex align-items-center tw-gap-2">' +
+              '<i class="ph ph-warning-circle tw-text-xl flex-shrink-0"></i>' +
+              '<span><strong>Please fix the errors above</strong> and complete all required fields.</span>' +
+            '</div>'
+          );
+        // Focus first field with error
+        $contactForm.find(".is-invalid").first().focus();
+        return;
+      }
+
+      // Enter loading state
+      $submitBtn.prop("disabled", true);
+      $btnSpinner.removeClass("d-none");
+      $btnText.text("OPENING EMAIL CLIENT...");
+
+      // Build structured email payload
+      const recipient = "aryan42006@gmail.com";
+      const emailSubject = `Portfolio Contact — Aryan Jha: ${subjectVal}`;
+      const emailBody =
+        `Hi Aryan,\n\n` +
+        `${messageVal}\n\n` +
+        `----------------------------------------\n` +
+        `Sender Information:\n` +
+        `Name: ${nameVal}\n` +
+        `Email: ${emailVal}\n` +
+        `Subject: ${subjectVal}\n` +
+        `Sent via Aryan Jha Portfolio Contact Form`;
+
+      const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+      // Simulate a responsive brief transition before triggering client
+      setTimeout(function () {
+        // Trigger mail client
+        const mailLink = document.createElement("a");
+        mailLink.href = mailtoUrl;
+        mailLink.rel = "noopener noreferrer";
+        document.body.appendChild(mailLink);
+        mailLink.click();
+        document.body.removeChild(mailLink);
+
+        // Display accessible confirmation banner
+        $statusAlert
+          .removeClass("d-none alert-danger")
+          .addClass("alert-success")
+          .html(
+            '<div class="d-flex align-items-start tw-gap-3">' +
+              '<i class="ph ph-check-circle tw-text-2xl text-success flex-shrink-0 mt-1"></i>' +
+              '<div>' +
+                '<h5 class="text-white tw-text-base fw-bold mb-1">Email Client Launched!</h5>' +
+                '<p class="tw-text-sm text-neutral-200 mb-2">Your message has been formatted and addressed to <strong>aryan42006@gmail.com</strong> in your default mail application.</p>' +
+                '<p class="tw-text-xs text-neutral-300 mb-0">Did your mail client not open automatically? ' +
+                  '<a href="' + mailtoUrl + '" class="text-main-600 fw-bold hover-underline">Click here to send directly</a> or email me at <a href="mailto:aryan42006@gmail.com?subject=Portfolio%20Contact%20%E2%80%94%20Aryan%20Jha" class="text-main-600 fw-bold hover-underline">aryan42006@gmail.com</a>.' +
+                '</p>' +
+              '</div>' +
+            '</div>'
+          );
+
+        // Restore button state
+        $submitBtn.prop("disabled", false);
+        $btnSpinner.addClass("d-none");
+        $btnText.text("SEND MESSAGE");
+      }, 400);
+    });
+  });
 })(jQuery);
