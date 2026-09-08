@@ -2,18 +2,17 @@
 ==================== JS INDEX ======================
 ****************************************************
 
-01. Smooth Scroll Js
+01. Smooth Scroll & ScrollSmoother Js
 02. Char SplitText Js
-03. Text Invart Js
+03. Text Invert / SplitText Js
 04. Button Hover Js
-05. Banner Title
-06. Footer Title
+05. Banner Title GSAP
+06. Footer Title GSAP
 07. Portfolio Panel Js
-08. Image Cliping Effect
-09. Hover Reveal
-10. Tesimonial Two Shape Effect
-11. Portfolio Three Effect
-
+08. Image Clipping Effect (9-Polygon Mask)
+09. Hover Reveal (Achivements/Feature Cursor Thumbnails)
+10. Testimonial Shape Effect
+11. Portfolio Three Shape Pinned Effect
 
 ****************************************************/
 
@@ -21,41 +20,65 @@
   "use strict";
 
   ////////////////////////////////////////////////////
-  // 01. Single-Page Smooth Scroll Navigation Js
-  function initSinglePageNavigation() {
-    $(document).on("click", 'a[href^="#"]', function (event) {
-      var href = $(this).attr("href");
-      if (!href || href === "#" || href.length <= 1) return;
+  // 01. Smooth Scroll & ScrollSmoother Js
+  let smoother = null;
+  if ($("#smooth-wrapper").length && $("#smooth-content").length) {
+    if (typeof gsap !== "undefined") {
+      gsap.registerPlugin(
+        ScrollTrigger,
+        ScrollSmoother,
+        TweenMax,
+        ScrollToPlugin,
+      );
+      gsap.config({
+        nullTargetWarn: false,
+      });
+      try {
+        smoother = ScrollSmoother.create({
+          smoothTouch: 0.2,
+          smooth: 4,
+          effects: true,
+          normalizeScroll: false,
+          ignoreMobileResize: true,
+        });
+      } catch (e) {
+        console.warn("ScrollSmoother initialization:", e);
+      }
+    }
+  }
 
-      var target = $(href);
-      if (target.length) {
-        event.preventDefault();
+  // Single-Page In-Page Smooth Scroll Navigation
+  $(document).on("click", 'a[href^="#"]', function (event) {
+    var href = $(this).attr("href");
+    if (!href || href === "#" || href.length <= 1) return;
 
-        // Close mobile offcanvas and sidebar menus if open
-        if ($(".tw-offcanvas-2-area").hasClass("opened")) {
-          $(".tw-text-hover-effect-word").removeClass("animated-text");
-          $(".tw-offcanvas-2-area").removeClass("opened");
-          $(".body-overlay").removeClass("opened");
-        }
-        if ($(".twoffcanvas").hasClass("opened")) {
-          $(".twoffcanvas").removeClass("opened");
-          $(".body-overlay").removeClass("apply");
-        }
-        if ($(".tw-header-side-menu").length) {
-          $(".tw-header-side-menu").slideUp();
-        }
+    var target = $(href);
+    if (target.length) {
+      event.preventDefault();
 
-        // Calculate target scroll position with fixed header offset (top: 0 for #home)
-        var targetPosition = 0;
-        if (href !== "#home") {
-          var headerOffset = 90;
-          targetPosition = Math.max(
-            0,
-            target[0].getBoundingClientRect().top + window.pageYOffset - headerOffset
-          );
-        }
+      // Close mobile offcanvas if open
+      if ($(".tw-offcanvas-2-area").hasClass("opened")) {
+        $(".tw-text-hover-effect-word").removeClass("animated-text");
+        $(".tw-offcanvas-2-area").removeClass("opened");
+        $(".body-overlay").removeClass("opened apply");
+      }
+      if ($(".twoffcanvas").hasClass("opened")) {
+        $(".twoffcanvas").removeClass("opened");
+        $(".body-overlay").removeClass("apply opened");
+      }
 
-        // Smoothly scroll to target
+      if (smoother) {
+        if (href === "#home") {
+          smoother.scrollTo(0, true);
+        } else {
+          smoother.scrollTo(target[0], true, "top 90px");
+        }
+      } else {
+        var headerOffset = href === "#home" ? 0 : 90;
+        var targetPosition = Math.max(
+          0,
+          target[0].getBoundingClientRect().top + window.pageYOffset - headerOffset
+        );
         try {
           window.scrollTo({
             top: targetPosition,
@@ -64,27 +87,13 @@
         } catch (e) {
           window.scrollTo(0, targetPosition);
         }
-
-        // Update URL hash cleanly without jumping or reloading
-        if (window.history && window.history.pushState) {
-          window.history.pushState(null, null, href);
-        }
       }
-    });
-  }
-  initSinglePageNavigation();
 
-  // Register GSAP plugins used throughout the site
-  if (typeof gsap !== "undefined") {
-    gsap.registerPlugin(
-      ScrollTrigger,
-      TweenMax,
-      ScrollToPlugin,
-    );
-    gsap.config({
-      nullTargetWarn: false,
-    });
-  }
+      if (window.history && window.history.pushState) {
+        window.history.pushState(null, null, href);
+      }
+    }
+  });
 
   ////////////////////////////////////////////////////
   // 02. Char SplitText Js
@@ -121,96 +130,71 @@
   }
 
   ////////////////////////////////////////////////////
-  // 03. Text Invart Js
-  if ($(".tw-itm-title tw-itm-anim").length) {
-    let staggerAmount = 0.03,
-      translateXValue = 20,
-      delayValue = 0.1,
-      easeType = "power2.out",
-      animatedTextElements = document.querySelectorAll(
-        ".tw-itm-title tw-itm-anim",
-      );
-
-    animatedTextElements.forEach((element) => {
-      let animationSplitText = new SplitText(element, { type: "chars, words" });
-
-      ScrollTrigger.create({
-        trigger: element,
-        start: "top 85%",
-        onEnter: () => {
-          gsap.from(animationSplitText.chars, {
-            duration: 1,
-            delay: delayValue,
-            x: translateXValue,
-            autoAlpha: 0,
-            stagger: staggerAmount,
-            ease: easeType,
-          });
-        },
-      });
-    });
-  }
+  // 03. Text Invert / SplitText Js
   if ($(".tw-sub-tilte").length) {
     var agtsub = $(".tw-sub-tilte");
-    if (agtsub.length == 0) return;
-    gsap.registerPlugin(SplitText);
-    agtsub.each(function (index, el) {
-      el.split = new SplitText(el, {
-        type: "lines,words,chars",
-        linesClass: "split-line",
-      });
-      if ($(el).hasClass("tw-sub-anim")) {
-        gsap.set(el.split.chars, {
-          opacity: 0,
-          x: "7",
+    if (agtsub.length > 0) {
+      gsap.registerPlugin(SplitText);
+      agtsub.each(function (index, el) {
+        el.split = new SplitText(el, {
+          type: "lines,words,chars",
+          linesClass: "split-line",
         });
-      }
-      el.anim = gsap.to(el.split.chars, {
-        scrollTrigger: {
-          trigger: el,
-          start: "top 90%",
-          end: "top 60%",
-          markers: false,
-          scrub: 1,
-        },
-        x: "0",
-        y: "0",
-        opacity: 1,
-        duration: 0.7,
-        stagger: 0.2,
+        if ($(el).hasClass("tw-sub-anim")) {
+          gsap.set(el.split.chars, {
+            opacity: 0,
+            x: "7",
+          });
+        }
+        el.anim = gsap.to(el.split.chars, {
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+            end: "top 60%",
+            markers: false,
+            scrub: 1,
+          },
+          x: "0",
+          y: "0",
+          opacity: 1,
+          duration: 0.7,
+          stagger: 0.2,
+        });
       });
-    });
+    }
   }
+
   if ($(".tw-itm-title").length) {
     var txtheading = $(".tw-itm-title");
-    if (txtheading.length == 0) return;
-    gsap.registerPlugin(SplitText);
-    txtheading.each(function (index, el) {
-      el.split = new SplitText(el, {
-        type: "lines,words,chars",
-        linesClass: "split-line",
-      });
-      if ($(el).hasClass("tw-itm-anim")) {
-        gsap.set(el.split.chars, {
-          opacity: 0.3,
-          x: "-7",
+    if (txtheading.length > 0) {
+      gsap.registerPlugin(SplitText);
+      txtheading.each(function (index, el) {
+        el.split = new SplitText(el, {
+          type: "lines,words,chars",
+          linesClass: "split-line",
         });
-      }
-      el.anim = gsap.to(el.split.chars, {
-        scrollTrigger: {
-          trigger: el,
-          start: "top 92%",
-          end: "top 60%",
-          markers: false,
-          scrub: 1,
-        },
-        x: "0",
-        y: "0",
-        opacity: 1,
-        duration: 0.7,
-        stagger: 0.2,
+        if ($(el).hasClass("tw-itm-anim")) {
+          gsap.set(el.split.chars, {
+            opacity: 0.3,
+            x: "-7",
+          });
+        }
+        el.anim = gsap.to(el.split.chars, {
+          scrollTrigger: {
+            trigger: el,
+            start: "top 92%",
+            end: "top 60%",
+            markers: false,
+            scrub: 1,
+          },
+          x: "0",
+          y: "0",
+          opacity: 1,
+          duration: 0.7,
+          stagger: 0.2,
+        });
       });
-    });
+    }
   }
 
   ////////////////////////////////////////////////////
@@ -247,6 +231,7 @@
       left: x,
     });
   });
+
   var hoverBtns = gsap.utils.toArray(".tw-hover-btn-wrapper");
   const hoverBtnItem = gsap.utils.toArray(".tw-hover-btn-item");
   hoverBtns.forEach((btn, i) => {
@@ -276,7 +261,7 @@
   });
 
   ////////////////////////////////////////////////////
-  // 05. Banner Title
+  // 05. Banner Title GSAP Responsive matchMedia
   const mm = gsap.matchMedia();
   mm.add(
     {
@@ -481,27 +466,29 @@
   ////////////////////////////////////////////////////
   // 07. Portfolio Panel Js
   let otherSections = document.querySelectorAll(".portfolio-panel");
-  gsap.set(otherSections, {
-    scale: 1,
-  });
-  otherSections.forEach((section) => {
-    gsap.to(section, {
-      scale: 0.8,
-      scrollTrigger: {
-        trigger: section,
-        pin: true,
-        scrub: 1,
-        start: "top 20%",
-        end: "bottom 100%",
-        endTrigger: ".portfolio-panel-area",
-        pinSpacing: false,
-        markers: false,
-      },
+  if (otherSections.length > 0) {
+    gsap.set(otherSections, {
+      scale: 1,
     });
-  });
+    otherSections.forEach((section) => {
+      gsap.to(section, {
+        scale: 0.8,
+        scrollTrigger: {
+          trigger: section,
+          pin: true,
+          scrub: 1,
+          start: "top 20%",
+          end: "bottom 100%",
+          endTrigger: ".portfolio-panel-area",
+          pinSpacing: false,
+          markers: false,
+        },
+      });
+    });
+  }
 
   ///////////////////////
-  // 08. Image Cliping Effect
+  // 08. Image Clipping Effect (9-Polygon Mask Unfold)
   document.addEventListener("DOMContentLoaded", () => {
     const initialClipPaths = [
       "polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%)",
@@ -525,12 +512,11 @@
       "polygon(30.33% 66.66%, 66.66% 65.66%, 66.66% 100%, 33.33% 100%)",
       "polygon(65.66% 66.66%, 100% 65.66%, 100% 100%, 65.66% 100%)",
     ];
-    // Create mask divs for each wrapper
+
     document.querySelectorAll(".tw-clip-anim").forEach((wrapper) => {
       const img = wrapper.querySelector(".tw-anim-img[data-animate='true']");
       if (!img) return;
       const url = img.src;
-      // Remove old masks if any (reuse safe)
       wrapper.querySelectorAll(".mask").forEach((m) => m.remove());
       for (let i = 0; i < 9; i++) {
         const mask = document.createElement("div");
@@ -545,7 +531,7 @@
         wrapper.appendChild(mask);
       }
     });
-    // Animate masks
+
     gsap.utils.toArray(".tw-clip-anim").forEach((wrapper) => {
       const masks = wrapper.querySelectorAll(".mask");
       if (!masks.length) return;
@@ -563,7 +549,7 @@
       order.forEach((targets, i) => {
         const validTargets = targets
           .map((c) => wrapper.querySelector(c))
-          .filter((el) => el); // filter out nulls
+          .filter((el) => el);
 
         if (validTargets.length) {
           tl.to(
@@ -583,83 +569,57 @@
   });
 
   ///////////////////////
-  // 09. Hover Reveal
+  // 09. Hover Reveal (Feature/Achievements Cursor Preview)
   const hoverItem = document.querySelectorAll(".hover__reveal-item");
-  function moveImage(e, hoverItem, index) {
-    const item = hoverItem.getBoundingClientRect();
-    const x = e.clientX - item.x;
-    const y = e.clientY - item.y;
-    if (hoverItem.children[index]) {
-      hoverItem.children[index].style.transform = `translate(${x}px, ${y}px)`;
+  function moveImage(e, item, index) {
+    const rect = item.getBoundingClientRect();
+    const x = e.clientX - rect.x;
+    const y = e.clientY - rect.y;
+    if (item.children[index]) {
+      item.children[index].style.transform = `translate(${x}px, ${y}px)`;
     }
   }
-  hoverItem.forEach((item, i) => {
+  hoverItem.forEach((item) => {
     item.addEventListener("mousemove", (e) => {
-      setInterval(moveImage(e, item, 1), 50);
+      moveImage(e, item, 1);
     });
   });
 
   ///////////////////////
-  // 10. Tesimonial Two child (2) Effect
-  gsap.registerPlugin(ScrollTrigger);
-  ScrollTrigger.matchMedia({
-    // only run on 1200px and above
-    "(min-width: 1199px)": function () {
+  // 10. Testimonial Two Shape Effect
+  let nn = gsap.matchMedia();
+  nn.add("(min-width: 1199px)", () => {
+    if ($(".testimonial-two-shape").length) {
       gsap.fromTo(
-        ".testimonial-two-main .testimonial-wrapper:nth-child(2)",
+        ".testimonial-two-shape",
+        { y: "0%" },
         {
-          y: 300,
-        },
-        {
-          y: 0,
-          ease: "power9.out",
+          y: "100%",
+          ease: "none",
           scrollTrigger: {
-            trigger: ".testimonial-two-main",
-            start: "top 80%",
-            end: "top 40%",
-            scrub: 5.5, // рџ‘€ add smooth transition delay
-            markers: false,
+            trigger: ".testimonial-two-shape",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1,
           },
         },
       );
-    },
-    // below 1199px в†’ do nothing (animation OFF)
-    "(max-width: 1198px)": function () {
-      // optional cleanup if needed
-    },
+    }
   });
 
   ///////////////////////
-  // 10. Tesimonial Two Shape Effect
-  let nn = gsap.matchMedia();
-  nn.add("(min-width: 1199px)", () => {
-    gsap.fromTo(
-      ".testimonial-two-shape",
-      { y: "0%" },
-      {
-        y: "100%",
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".testimonial-two-shape",
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1,
-        },
+  // 11. Portfolio Three Effect (Pinned works title)
+  if ($(".portfolio-three-shape").length && $(".portfolio-three-area").length) {
+    gsap.to(".portfolio-three-shape", {
+      scrollTrigger: {
+        trigger: ".portfolio-three-area",
+        start: "top center-=200",
+        pin: ".portfolio-three-shape",
+        end: "bottom bottom-=200",
+        markers: false,
+        pinSpacing: false,
+        scrub: 1,
       },
-    );
-  });
-
-  ///////////////////////
-  // 11. Portfolio Three Effect
-  gsap.to(".portfolio-three-shape", {
-    scrollTrigger: {
-      trigger: ".portfolio-three-area",
-      start: "top center-=200",
-      pin: ".portfolio-three-shape",
-      end: "bottom bottom-=200",
-      markers: false,
-      pinSpacing: false,
-      scrub: 1,
-    },
-  });
+    });
+  }
 })(jQuery);

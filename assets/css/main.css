@@ -1,7 +1,8 @@
 /* Media Breakpoint for Each Device End */
 /* ======================= Css table of contents Start =================================
-   * Name: Aryan Jha Portfolio
-   * Description: Software Engineering & AI/ML Portfolio Stylesheet
+   * Template name: Unifex
+   * Version: 1.0
+   * Description: Unifex HTML Template
    * Author: rox_themes
    * Author-url: https://themeforest.net/user/rox_themes */
 /* **************************** Abstracts ****************************
@@ -5743,7 +5744,7 @@ input:focus-visible {
 .preloader svg {
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 110vh;
   fill: #111;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px;
@@ -5897,10 +5898,6 @@ input:focus-visible {
 }
 .header-three-button {
   margin-block-end: -6px;
-  white-space: nowrap !important;
-}
-.header-three-button a {
-  white-space: nowrap !important;
 }
 .header-three-menu button {
   box-shadow:
@@ -6247,14 +6244,53 @@ input:focus-visible {
   }
 }
 .footer-three-bottom-title {
-  font-size: clamp(32px, 12vw, 240px);
-  line-height: 85%;
-  letter-spacing: clamp(-4px, -0.4vw, -1px);
-  max-width: 100%;
-  width: 100%;
-  text-align: center;
-  word-break: normal;
-  overflow-wrap: normal;
+  font-size: 395px;
+  line-height: 83%;
+}
+@media screen and (max-width: 1799px) {
+  .footer-three-bottom-title {
+    font-size: 372px;
+  }
+}
+@media screen and (max-width: 1699px) {
+  .footer-three-bottom-title {
+    font-size: 345px;
+  }
+}
+@media screen and (max-width: 1499px) {
+  .footer-three-bottom-title {
+    font-size: 306px;
+  }
+}
+@media screen and (max-width: 1399px) {
+  .footer-three-bottom-title {
+    font-size: 260px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .footer-three-bottom-title {
+    font-size: 215px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .footer-three-bottom-title {
+    font-size: 164px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer-three-bottom-title {
+    font-size: 120px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .footer-three-bottom-title {
+    font-size: 89px;
+  }
+}
+@media screen and (max-width: 424px) {
+  .footer-three-bottom-title {
+    font-size: 78px;
+  }
 }
 
 .main-menu > nav > ul > li {
@@ -8155,14 +8191,53 @@ body.tw-magic-cursor #magic-cursor {
   }
 }
 .banner-three-title {
-  font-size: clamp(34px, 12.8vw, 240px);
-  line-height: 85%;
-  letter-spacing: clamp(-4px, -0.4vw, -1px);
-  max-width: 100%;
-  width: 100%;
-  text-align: center;
-  word-break: normal;
-  overflow-wrap: normal;
+  font-size: 397px;
+  line-height: 83%;
+}
+@media screen and (max-width: 1799px) {
+  .banner-three-title {
+    font-size: 370px;
+  }
+}
+@media screen and (max-width: 1699px) {
+  .banner-three-title {
+    font-size: 350px;
+  }
+}
+@media screen and (max-width: 1499px) {
+  .banner-three-title {
+    font-size: 307px;
+  }
+}
+@media screen and (max-width: 1399px) {
+  .banner-three-title {
+    font-size: 260px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .banner-three-title {
+    font-size: 216px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .banner-three-title {
+    font-size: 166px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner-three-title {
+    font-size: 123px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .banner-three-title {
+    font-size: 88px;
+  }
+}
+@media screen and (max-width: 424px) {
+  .banner-three-title {
+    font-size: 78px;
+  }
 }
 .banner-three-left {
   max-width: 410px;
@@ -8274,9 +8349,6 @@ body.tw-magic-cursor #magic-cursor {
 }
 .banner-three-line-shape {
   inset-block-end: 13%;
-  max-width: 100%;
-  overflow: hidden;
-  pointer-events: none;
 }
 @media screen and (max-width: 1199px) {
   .banner-three-line-shape {
@@ -8289,8 +8361,7 @@ body.tw-magic-cursor #magic-cursor {
   }
 }
 .banner-three-line-shape img {
-  max-width: 100%;
-  height: auto;
+  max-width: inherit;
 }
 .banner-three-carcel-shape {
   width: 50px;
@@ -8458,8 +8529,6 @@ body.tw-magic-cursor #magic-cursor {
   box-shadow:
     0 4px 4px 0 rgba(0, 0, 0, 0.25),
     -4px -4px 0 0 rgba(255, 255, 255, 0.25);
-  overflow: hidden;
-  max-width: 100%;
 }
 @media screen and (max-width: 1199px) {
   .about-three-counter .tw-btn-circle {
@@ -8467,30 +8536,8 @@ body.tw-magic-cursor #magic-cursor {
     height: 350px;
   }
 }
-@media screen and (max-width: 575px) {
-  .about-three-counter .tw-btn-circle {
-    width: min(290px, 86vw);
-    height: min(290px, 86vw);
-  }
-}
-@media screen and (max-width: 375px) {
-  .about-three-counter .tw-btn-circle {
-    width: min(260px, 84vw);
-    height: min(260px, 84vw);
-  }
-}
 .about-three-counter .tw-btn-circle-icon {
   font-size: 200px;
-}
-@media screen and (max-width: 1199px) {
-  .about-three-counter .tw-btn-circle-icon {
-    font-size: 150px;
-  }
-}
-@media screen and (max-width: 575px) {
-  .about-three-counter .tw-btn-circle-icon {
-    font-size: clamp(65px, 20vw, 110px);
-  }
 }
 .about-three-counter .tw-btn-circle-dot {
   width: 63px;
@@ -8646,16 +8693,9 @@ body.tw-magic-cursor #magic-cursor {
 .marquee {
   display: flex;
   flex-direction: column;
-  overflow: hidden !important;
-  max-width: 100%;
-  width: 100%;
-  position: relative;
 }
 .marquee_left {
   padding-block: 16px;
-  overflow: hidden !important;
-  max-width: 100%;
-  width: 100%;
 }
 
 .js-marquee {
@@ -8839,12 +8879,52 @@ body.tw-magic-cursor #magic-cursor {
     -4px -4px 0 0 rgba(255, 255, 255, 0.25);
 }
 .portfolio-three-shape-title {
-  font-size: clamp(80px, 20vw, 360px);
-  line-height: 90%;
-  letter-spacing: -2px;
-  max-width: 100%;
-  pointer-events: none;
-  user-select: none;
+  font-size: 642px;
+}
+@media screen and (max-width: 1799px) {
+  .portfolio-three-shape-title {
+    font-size: 580px;
+  }
+}
+@media screen and (max-width: 1699px) {
+  .portfolio-three-shape-title {
+    font-size: 555px;
+  }
+}
+@media screen and (max-width: 1499px) {
+  .portfolio-three-shape-title {
+    font-size: 480px;
+  }
+}
+@media screen and (max-width: 1399px) {
+  .portfolio-three-shape-title {
+    font-size: 415px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .portfolio-three-shape-title {
+    font-size: 340px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .portfolio-three-shape-title {
+    font-size: 265px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .portfolio-three-shape-title {
+    font-size: 200px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .portfolio-three-shape-title {
+    font-size: 146px;
+  }
+}
+@media screen and (max-width: 424px) {
+  .portfolio-three-shape-title {
+    font-size: 130px;
+  }
 }
 
 .portfolio-ip-two-wrapper {
@@ -9120,27 +9200,13 @@ body.tw-magic-cursor #magic-cursor {
   padding: 30px 30px 30px 60px;
   border-radius: 200px;
   margin-block-end: 60px;
-  max-width: 100%;
+  max-width: 1500px;
   width: 100%;
   transition: 0.5s;
 }
-@media screen and (max-width: 991px) {
-  .service-three-single {
-    padding: 28px 24px 28px 36px;
-    border-radius: 40px;
-  }
-}
 @media screen and (max-width: 767px) {
   .service-three-single {
-    padding: 24px 20px;
-    border-radius: 24px;
-    margin-block-end: 30px;
-  }
-}
-@media screen and (max-width: 575px) {
-  .service-three-single {
-    padding: 20px 16px;
-    border-radius: 20px;
+    border-radius: 100px;
   }
 }
 .service-three-single:hover {
@@ -10002,18 +10068,12 @@ body.tw-magic-cursor #magic-cursor {
     margin-block-end: 60px;
   }
 }
+
+/*# sourceMappingURL=main.css.map */
+
 /* ==========================================================================
-   Single-Page Smooth Scrolling & Section Offset Navigation
+   In-page Section Anchors & Functional Contact Form
    ========================================================================== */
-html {
-  scroll-behavior: smooth;
-  overflow-x: clip;
-}
-
-body {
-  overflow-x: clip;
-}
-
 #home,
 #about,
 #skills,
@@ -10024,51 +10084,11 @@ body {
   scroll-margin-top: 100px;
 }
 
-#smooth-wrapper {
-  overflow: visible !important;
-  overflow-x: clip !important;
-  height: auto !important;
-  width: 100% !important;
-  position: relative !important;
+.header-three-button {
+  white-space: nowrap !important;
 }
-
-#smooth-content {
-  overflow: visible !important;
-  overflow-x: clip !important;
-  width: 100% !important;
-  transform: none !important;
-}
-
-.banner-three-area,
-.marquee,
-.marquee-area,
-.about-three-area,
-.service-three-area,
-.portfolio-three-area,
-.feature-three-area,
-.testimonial-three-area,
-.footer-three-area {
-  overflow: hidden !important;
-  max-width: 100%;
-  position: relative;
-}
-
-.banner-three-line-shape {
-  max-width: 100%;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.about-three-shape,
-.footer-three-area img.position-absolute {
-  max-width: 100%;
-  pointer-events: none;
-}
-
-@media (max-width: 767px), (hover: none) {
-  #ball {
-    display: none !important;
-  }
+.header-three-button a {
+  white-space: nowrap !important;
 }
 
 .feature-three-single {
@@ -10094,103 +10114,7 @@ body {
   box-shadow: 0 12px 32px rgba(249, 85, 36, 0.45) !important;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* ==========================================================================
-   Offcanvas Navigation Menu - Aligned with Reference Repo Structure
-   ========================================================================== */
-.tw-offcanvas-2-area .tw-main-menu-mobile {
-  padding-left: clamp(24px, 5vw, 90px) !important;
-  padding-right: clamp(20px, 4vw, 80px) !important;
-  margin-top: 20px !important;
-}
-
-.tw-offcanvas-2-area .tw-main-menu-mobile nav > ul {
-  display: block !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  list-style: none !important;
-  counter-reset: offcanvas-counter !important;
-}
-
-.tw-offcanvas-2-area .tw-main-menu-mobile nav > ul > li {
-  display: block !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.tw-offcanvas-2-area .tw-main-menu-mobile nav > ul > li:last-child {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-}
-
-.tw-offcanvas-2-area .tw-main-menu-mobile nav > ul > li > a {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  writing-mode: horizontal-tb !important;
-  text-orientation: mixed !important;
-  font-size: clamp(24px, 3.8vw, 44px) !important;
-  font-weight: 600 !important;
-  font-family: var(--heading-font, sans-serif) !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.04em !important;
-  color: rgba(255, 255, 255, 0.55) !important;
-  padding: clamp(10px, 1.4vh, 18px) 0 !important;
-  text-decoration: none !important;
-  position: relative !important;
-  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
-  cursor: pointer !important;
-}
-
-.tw-offcanvas-2-area .tw-main-menu-mobile nav > ul > li > a::before {
-  counter-increment: offcanvas-counter !important;
-  content: "0" counter(offcanvas-counter) !important;
-  font-size: clamp(12px, 1.2vw, 15px) !important;
-  font-weight: 400 !important;
-  color: rgba(255, 255, 255, 0.3) !important;
-  margin-right: clamp(16px, 2vw, 28px) !important;
-  letter-spacing: 0.1em !important;
-  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
-}
-
-.tw-offcanvas-2-area .tw-main-menu-mobile nav > ul > li > a:hover {
-  color: #ffffff !important;
-  padding-left: clamp(12px, 1.8vw, 24px) !important;
-  text-shadow: 0 0 16px rgba(255, 87, 34, 0.7),
-               0 0 32px rgba(255, 87, 34, 0.35) !important;
-}
-
-.tw-offcanvas-2-area .tw-main-menu-mobile nav > ul > li > a:hover::before {
-  color: var(--main-two-600, #f95524) !important;
-}
-
-@media (max-width: 767px) {
-  .tw-offcanvas-2-area .tw-main-menu-mobile {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-    margin-top: 15px !important;
-  }
-  .tw-offcanvas-2-area .tw-main-menu-mobile nav > ul > li > a {
-    font-size: 24px !important;
-    padding: 10px 0 !important;
-  }
-  .tw-offcanvas-2-area .tw-main-menu-mobile nav > ul > li > a::before {
-    font-size: 12px !important;
-    margin-right: 14px !important;
-  }
-}
-
-/* ==================== Functional Contact Section Styles ==================== */
+/* Functional Contact Section Styles */
 .footer-three-form .form-label {
   font-size: 0.9375rem;
   letter-spacing: 0.02em;
@@ -10292,5 +10216,3 @@ body {
     padding-block: 12px !important;
   }
 }
-
-/*# sourceMappingURL=main.css.map */

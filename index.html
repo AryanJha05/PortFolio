@@ -74,7 +74,7 @@
 
     <!-- ==================== Scroll to Top End Here ==================== -->
     <div class="back-to-top-wrapper">
-      <button id="back_to_top" type="button" class="back-to-top-btn">
+      <button id="back_to_top" type="button" class="back-to-top-btn" aria-label="Back to Top">
         <svg
           width="12"
           height="7"
@@ -104,12 +104,12 @@
             class="tw-offcanvas-2-left-wrap d-flex justify-content-between align-items-center"
           >
             <div class="twoffcanvas__logo">
-              <a class="logo-1 text-white fw-bold tw-text-2xl text-uppercase" href="#home">
+              <a class="logo-1 text-white fw-bold tw-text-2xl text-uppercase text-decoration-none" href="#home">
                 ARYAN JHA
               </a>
             </div>
             <div class="tw-offcanvas-2-close d-md-none text-end">
-              <button class="tw-offcanvas-2-close-btn tw-offcanvas-2-close-btn">
+              <button class="tw-offcanvas-2-close-btn" aria-label="Close Menu">
                 <span class="text">
                   <span class="text-white">close</span>
                 </span>
@@ -140,25 +140,15 @@
               </button>
             </div>
           </div>
-          <div class="tw-main-menu-mobile menu-hover-active counter-row">
-            <nav>
-              <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
+          <div
+            class="tw-main-menu-mobile menu-hover-active counter-row"
+          ></div>
         </div>
         <div
           class="tw-offcanvas-2-right right-box d-none d-md-block p-relative"
         >
           <div class="tw-offcanvas-2-close text-end">
-            <button class="tw-offcanvas-2-close-btn">
+            <button class="tw-offcanvas-2-close-btn" aria-label="Close Menu">
               <span class="text">
                 <span>close</span>
               </span>
@@ -208,7 +198,7 @@
                   <span class="text-main-two-600 tw-text-xl"
                     ><i class="ph ph-envelope"></i
                   ></span>
-                  <a class="text-white hover-text-main-600" href="mailto:aryan42006@gmail.com?subject=Portfolio%20Contact%20%E2%80%94%20Aryan%20Jha"
+                  <a class="text-white hover-text-main-600 text-decoration-none" href="mailto:aryan42006@gmail.com"
                     >aryan42006@gmail.com</a
                   >
                 </li>
@@ -216,7 +206,7 @@
                   <span class="text-main-two-600 tw-text-xl"
                     ><i class="ph ph-phone-call"></i
                   ></span>
-                  <a class="text-white" href="tel:9023404715"
+                  <a class="text-white text-decoration-none" href="tel:9023404715"
                     >+91 9023404715</a
                   >
                 </li>
@@ -230,8 +220,9 @@
             >
               <ul class="tw-gap-2">
                 <li>
-                  <a href="https://www.linkedin.com/in/aryan-jha-050406aj/" target="_blank" rel="noopener noreferrer">
-                    <span class="active-media d-flex align-items-center tw-gap-1"
+                  <a href="https://www.linkedin.com/in/aryan-jha-050406aj/" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                    <span
+                      class="active-media d-flex align-items-center tw-gap-1"
                       >LINKEDIN <i class="ph ph-arrow-bend-up-right"></i
                     ></span>
                     <span class="hover-media"
@@ -240,8 +231,9 @@
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/aryanjha05" target="_blank" rel="noopener noreferrer">
-                    <span class="active-media d-flex align-items-center tw-gap-1"
+                  <a href="https://github.com/aryanjha05" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                    <span
+                      class="active-media d-flex align-items-center tw-gap-1"
                       >GITHUB <i class="ph ph-arrow-bend-up-right"></i
                     ></span>
                     <span class="hover-media"
@@ -250,8 +242,9 @@
                   </a>
                 </li>
                 <li>
-                  <a href="https://codolio.com/profile/SogeKing_" target="_blank" rel="noopener noreferrer">
-                    <span class="active-media d-flex align-items-center tw-gap-1"
+                  <a href="https://codolio.com/profile/SogeKing_" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                    <span
+                      class="active-media d-flex align-items-center tw-gap-1"
                       >CODOLIO <i class="ph ph-arrow-bend-up-right"></i
                     ></span>
                     <span class="hover-media"
@@ -267,118 +260,117 @@
     </div>
     <!-- ==================== Offcanvus Mobile Menu End Here ==================== -->
 
-    <!-- ==================== Header Start Here ==================== -->
-    <header
-      class="header header-two header-three tw-transition-all tw-z-99 position-relative"
-    >
-      <div class="container tw-container-1800-px">
-        <nav
-          class="d-flex align-items-center justify-content-between position-relative"
-        >
-          <!-- Logo Start -->
-          <div class="header-three-logo tw-rounded-md">
-            <a href="#home" class="link text-heading fw-bold tw-text-2xl text-uppercase text-decoration-none">
-              ARYAN JHA
-            </a>
-          </div>
-          <!-- Logo End  -->
-
-          <!-- Social Links Start  -->
-          <div class="header-three-social d-none d-lg-block">
-            <ul class="d-flex tw-gap-205">
-              <li>
-                <a
-                  class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md"
-                  href="https://www.linkedin.com/in/aryan-jha-050406aj/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="LinkedIn"
-                  ><i class="ph-bold ph-linkedin-logo"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md"
-                  href="https://github.com/aryanjha05"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="GitHub"
-                  ><i class="ph-bold ph-github-logo"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md"
-                  href="https://codolio.com/profile/SogeKing_"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Codolio"
-                  ><i class="ph-bold ph-code-simple"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
-          <!-- Social Links End  -->
-
-          <!-- Main Navigation Start  -->
-          <div class="header-menu d-none d-xl-block">
-            <div class="main-menu">
-              <nav class="tw-main-menu-content">
-                <ul class="d-flex tw-gap-6 list-unstyled mb-0">
-                  <li><a class="text-heading fw-semibold text-decoration-none" href="#home">Home</a></li>
-                  <li><a class="text-heading fw-semibold text-decoration-none" href="#about">About</a></li>
-                  <li><a class="text-heading fw-semibold text-decoration-none" href="#skills">Skills</a></li>
-                  <li><a class="text-heading fw-semibold text-decoration-none" href="#projects">Projects</a></li>
-                  <li><a class="text-heading fw-semibold text-decoration-none" href="#achievements">Achievements</a></li>
-                  <li><a class="text-heading fw-semibold text-decoration-none" href="#certifications">Certifications</a></li>
-                  <li><a class="text-heading fw-semibold text-decoration-none" href="#contact">Contact</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-          <!-- Main Navigation End  -->
-
-          <!-- Header Right start -->
-          <div class="header-right d-flex align-items-center tw-gap-705">
-            <!-- Menu Button Start  -->
-            <div class="header-three-menu">
-              <button
-                class="tw-offcanvas-open-btn tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center tw-transition-3 tw-rounded-md"
-                aria-label="Open Navigation Menu"
-              >
-                <span
-                  ><img
-                    class="tw-transition-3"
-                    src="assets/images/icons/header-three-toggle.svg"
-                    alt="toggle"
-                /></span>
-              </button>
-            </div>
-            <!-- Menu Button End  -->
-
-            <!-- Header Button Start  -->
-            <div class="header-three-button d-none d-md-block">
-              <a
-                class="tw-hover-btn bg-black text-white fw-bold tw-py-4 tw-px-10 d-inline-block hover-text-white text-uppercase tw-rounded-md"
-                href="assets/Aryan-Jha-Resume.pdf"
-                target="_blank"
-                download="Aryan-Jha-Resume.pdf"
-              >
-                DOWNLOAD CV
-                <span class="tw-hover-btn-circle-dot bg-main-two-600"></span>
-              </a>
-            </div>
-            <!-- Header Button End  -->
-          </div>
-
-          <!-- Header Right End  -->
-        </nav>
-      </div>
-    </header>
-    <!-- ==================== Header End Here ==================== -->
-
     <div id="smooth-wrapper">
       <div id="smooth-content">
+        <!-- ==================== Header Start Here ==================== -->
+        <header
+          class="header header-two header-three tw-transition-all tw-z-99 position-relative"
+        >
+          <div class="container tw-container-1800-px">
+            <nav
+              class="d-flex align-items-center justify-content-between position-relative"
+            >
+              <!-- Logo Start -->
+              <div class="header-three-logo tw-rounded-md">
+                <a href="#home" class="link text-heading fw-bold tw-text-2xl text-uppercase text-decoration-none">
+                  ARYAN JHA
+                </a>
+              </div>
+              <!-- Logo End  -->
+
+              <!-- Social Start  -->
+              <div class="header-three-social d-none d-lg-block">
+                <ul class="d-flex tw-gap-205">
+                  <li>
+                    <a
+                      class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md text-decoration-none"
+                      href="https://www.linkedin.com/in/aryan-jha-050406aj/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="LinkedIn"
+                      ><i class="ph-bold ph-linkedin-logo"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md text-decoration-none"
+                      href="https://github.com/aryanjha05"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="GitHub"
+                      ><i class="ph-bold ph-github-logo"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      class="tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center text-heading tw-text-xl tw-rounded-md text-decoration-none"
+                      href="https://codolio.com/profile/SogeKing_"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Codolio"
+                      ><i class="ph-bold ph-code-simple"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Social End  -->
+
+              <!-- Menu Source for Offcanvas Clone (Hidden on desktop header per reference design)  -->
+              <div class="header-menu d-none">
+                <div class="main-menu">
+                  <nav class="tw-main-menu-content">
+                    <ul>
+                      <li><a href="#home">Home</a></li>
+                      <li><a href="#about">About</a></li>
+                      <li><a href="#skills">Skills</a></li>
+                      <li><a href="#projects">Projects</a></li>
+                      <li><a href="#achievements">Achievements</a></li>
+                      <li><a href="#certifications">Certifications</a></li>
+                      <li><a href="#contact">Contact</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <!-- Menu Source End  -->
+
+              <!-- Header Right start -->
+              <div class="header-right d-flex align-items-center tw-gap-705">
+                <!-- Menu Button Start  -->
+                <div class="header-three-menu">
+                  <button
+                    class="tw-offcanvas-open-btn tw-w-13 tw-h-13 lh-1 d-inline-flex justify-content-center align-items-center tw-transition-3 tw-rounded-md"
+                    aria-label="Open Navigation Menu"
+                  >
+                    <span
+                      ><img
+                        class="tw-transition-3"
+                        src="assets/images/icons/header-three-toggle.svg"
+                        alt="toggle"
+                    /></span>
+                  </button>
+                </div>
+                <!-- Menu Button End  -->
+
+                <!-- Header Button Start  -->
+                <div class="header-three-button d-none d-md-block">
+                  <a
+                    class="tw-hover-btn bg-black text-white fw-bold tw-py-4 tw-px-10 d-inline-block hover-text-white text-uppercase tw-rounded-md text-decoration-none"
+                    href="assets/Aryan-Jha-Resume.pdf"
+                    target="_blank"
+                    download="Aryan-Jha-Resume.pdf"
+                  >
+                    download cv
+                    <span class="tw-hover-btn-circle-dot bg-main-two-600"></span>
+                  </a>
+                </div>
+                <!-- Header Button End  -->
+              </div>
+              <!-- Header Right End  -->
+            </nav>
+          </div>
+        </header>
+        <!-- ==================== Header End Here ==================== -->
+
         <!-- ==================== Hero Section Start ==================== -->
         <section id="home" class="banner-three-area">
           <div class="container tw-container-1800-px">
@@ -390,13 +382,13 @@
                   >
                     <img
                       src="assets/images/aryan-profile.png"
-                      alt="Aryan Jha Visual Portrait"
+                      alt="Aryan Jha Portrait"
                       class="tw-rounded-lg shadow-lg"
                       style="max-height: 480px; object-fit: cover;"
                     />
                   </div>
                   <h1 class="banner-three-title text-black tw-mb-30">
-                    DEVELOPER
+                    developer
                   </h1>
                   <div
                     class="banner-three-wrap d-flex justify-content-between align-items-end position-relative z-1"
@@ -408,8 +400,8 @@
                       data-aos-delay="200"
                     >
                       <h2 class="banner-three-left-title tw-text-3xl tw-mb-6">
-                        ARYAN JHA <br />
-                        B.Tech CSE (AI & ML) Student
+                        Hello! I&#39;m Aryan <br />
+                        Jha. an engineer and AI/ML developer from Vadodara.
                       </h2>
                       <div class="banner-three-list">
                         <ul>
@@ -421,7 +413,7 @@
                                 src="assets/images/icons/banner-three-pluse.svg"
                                 alt="plus"
                             /></span>
-                            Data Structures & Algorithms
+                            Data Structures &amp; Algorithms
                           </li>
                           <li
                             class="tw-text-lg fw-medium d-inline-flex align-items-center tw-gap-2 tw-mb-4"
@@ -431,7 +423,7 @@
                                 src="assets/images/icons/banner-three-pluse.svg"
                                 alt="plus"
                             /></span>
-                            AI & Machine Learning
+                            AI &amp; Machine Learning
                           </li>
                           <li
                             class="tw-text-lg fw-medium d-inline-flex align-items-center tw-gap-2 tw-mb-4"
@@ -451,7 +443,7 @@
                                 src="assets/images/icons/banner-three-pluse.svg"
                                 alt="plus"
                             /></span>
-                            Java & Python Development
+                            Java &amp; Python Development
                           </li>
                           <li
                             class="tw-text-lg fw-medium d-inline-flex align-items-center tw-gap-2 tw-mb-4"
@@ -473,7 +465,7 @@
                       data-aos-delay="200"
                     >
                       <h3 class="banner-three-center-title tw-text-120">
-                        Aspiring Software Engineer building with Java, Python, React, AI/ML and modern web technologies.
+                        Algorithms, machine learning models, and modern web applications crafted for high performance.
                       </h3>
                       <div class="banner-three-button">
                         <a
@@ -569,17 +561,17 @@
           <div class="container tw-container-1800-px">
             <div class="about-three-top position-relative z-1">
               <div class="row justify-content-center tw-mb-21">
-                <div class="col-xl-10">
+                <div class="col-xl-9">
                   <div class="text-center">
                     <h2
                       class="about-three-title text-heading tw-text-15 tw-itm-title tw-itm-anim"
                     >
-                      B.Tech Computer Science & Engineering (AI & ML) student with strong foundations in Data Structures & Algorithms, Object-Oriented Programming, Java, Python, SQL, and full-stack development.
+                      I am dedicated to solving complex algorithmic challenges and building intelligent, scalable digital solutions. With over 800+ solved problems and hands-on AI/ML engineering, my work speaks for itself.
                     </h2>
                   </div>
                 </div>
               </div>
-              <div class="row align-items-center">
+              <div class="row">
                 <div class="col-xl-6">
                   <div
                     class="about-three-thumb w-100 tw-clip-anim tw-rounded-lg"
@@ -591,7 +583,7 @@
                       class="tw-anim-img w-100 tw-rounded-lg"
                       data-animate="true"
                       src="assets/images/thumbs/about-three-thumb.jpg"
-                      alt="Aryan Jha Workspace"
+                      alt="Aryan Jha Engineering Workspace"
                     />
                   </div>
                 </div>
@@ -603,11 +595,14 @@
                     data-aos-delay="300"
                   >
                     <div>
-                      <p class="tw-text-xl tw-mb-6">
-                        Solved 800+ coding problems across competitive programming platforms with a LeetCode rating of 1681. Experienced in building software solutions and collaborating in teams to solve complex engineering problems.
+                      <p class="tw-text-xl tw-mb-10">
+                        I am a Computer Science &amp; Engineering (AI &amp; ML) student at Parul University with a strong academic foundation (CGPA 8.38) and a relentless passion for software development, data structures, and algorithms.
                       </p>
                       <p class="tw-text-xl tw-mb-10">
-                        Passionate about designing scalable machine learning pipelines, deep learning computer vision systems, and robust full-stack applications.
+                        With competitive programming experience spanning 800+ problems on LeetCode (1681 rating), CodeChef (1467 rating), and Codeforces (986 rating), I thrive on breaking down intricate problems into elegant, optimized solutions.
+                      </p>
+                      <p class="tw-text-xl tw-mb-10">
+                        From designing computer vision image classifiers and LLM driver coaching systems to building robust full-stack web applications, I bring disciplined engineering practices, clean code, and end-to-end technical execution to every project.
                       </p>
                     </div>
                     <div class="about-three-counter d-inline-block">
@@ -624,8 +619,8 @@
                               >8.38</span
                             >
                             <span
-                              class="text-heading fw-bold text-center tw-transition-3 tw-text-lg fw-medium"
-                              >CGPA</span
+                              class="text-heading fw-bold text-center tw-transition-3 tw-text-2xl fw-medium"
+                              >B.Tech CGPA</span
                             >
                           </span>
                           <i class="tw-btn-circle-dot bg-main-two-600"></i>
@@ -636,7 +631,7 @@
                 </div>
               </div>
               <div
-                class="about-three-wrap-shape d-flex justify-content-between mt-5"
+                class="about-three-wrap-shape d-flex justify-content-between"
               >
                 <div
                   class="banner-three-counter-item tw-rounded-md position-relative"
@@ -649,14 +644,15 @@
                   >
                     <span
                       class="purecounter font-heading"
-                      data-purecounter-duration="3"
+                      data-purecounter-duration="4"
                       data-purecounter-end="1467"
-                    ></span>
+                    ></span
+                    >
                   </h2>
                   <p
                     class="banner-three-counter-paragraph tw-text-lg fw-medium text-heading"
                   >
-                    CodeChef Max Rating
+                    CodeChef Max Rating (2-Star)
                   </p>
                 </div>
                 <div
@@ -670,14 +666,15 @@
                   >
                     <span
                       class="purecounter font-heading"
-                      data-purecounter-duration="3"
+                      data-purecounter-duration="2"
                       data-purecounter-end="986"
-                    ></span>
+                    ></span
+                    >
                   </h2>
                   <p
                     class="banner-three-counter-paragraph tw-text-lg fw-medium text-heading"
                   >
-                    Codeforces Max Rating
+                    Codeforces Max Rating (Pupil)
                   </p>
                 </div>
               </div>
@@ -716,7 +713,7 @@
               <h2
                 class="marquee-two-title marquee-three-title text-uppercase text-white"
               >
-                AI & ML <span class="text-white">-</span>
+                AI &amp; ML <span class="text-white">-</span>
               </h2>
             </div>
             <div>
@@ -743,7 +740,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="service-three-wrapper">
-                  <!-- Skill 01 -->
+                  <!-- Skill Item 01 -->
                   <div
                     class="service-three-single"
                     data-aos="fade-right"
@@ -769,36 +766,68 @@
                             <h2
                               class="service-three-title tw-text-15 text-white tw-mb-4"
                             >
-                              Languages
+                              <a href="#projects" class="text-white text-decoration-none">Languages</a>
                             </h2>
                           </div>
                           <div class="portfolio-list portfolio-two-list">
                             <ul class="d-flex tw-gap-205 flex-wrap">
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">Python</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >Java</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">Java</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >Python</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">SQL</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >C</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">JavaScript</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >JavaScript</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">Bash</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >SQL</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >HTML5 / CSS3</a
+                                >
                               </li>
                             </ul>
                           </div>
                         </div>
                       </div>
                       <div class="service-three-thumb">
-                        <img src="assets/images/thumbs/service-three-thumb1.png" alt="Languages" />
+                        <a href="#projects"
+                          ><img
+                            src="assets/images/thumbs/service-three-thumb1.png"
+                            alt="Languages thumbnail"
+                        /></a>
                       </div>
                     </div>
                   </div>
-                  <!-- Skill 02 -->
+
+                  <!-- Skill Item 02 -->
                   <div
                     class="service-three-single ms-auto"
                     data-aos="fade-left"
@@ -824,47 +853,87 @@
                             <h2
                               class="service-three-title tw-text-15 text-white tw-mb-4"
                             >
-                              AI / ML
+                              <a href="#projects" class="text-white text-decoration-none">AI &amp; Machine Learning</a>
                             </h2>
                           </div>
                           <div class="portfolio-list portfolio-two-list">
                             <ul class="d-flex tw-gap-205 flex-wrap">
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">Machine Learning</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >Machine Learning</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">TensorFlow</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >Deep Learning</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">Keras</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >PyTorch</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">Scikit-learn</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >TensorFlow / Keras</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">XGBoost</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >Scikit-Learn</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">LLMs</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >CNNs &amp; OpenCV</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">Prompt Engineering</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >LLMs &amp; Agents</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >NLP</a
+                                >
                               </li>
                             </ul>
                           </div>
                         </div>
                       </div>
                       <div class="service-three-thumb">
-                        <img src="assets/images/thumbs/service-three-thumb2.png" alt="AI / ML" />
+                        <a href="#projects"
+                          ><img
+                            src="assets/images/thumbs/service-three-thumb2.png"
+                            alt="AI / ML thumbnail"
+                        /></a>
                       </div>
                     </div>
                   </div>
-                  <!-- Skill 03 -->
+
+                  <!-- Skill Item 03 -->
                   <div
                     class="service-three-single"
                     data-aos="fade-right"
                     data-aos-duration="2000"
-                    data-aos-delay="400"
+                    data-aos-delay="200"
                   >
                     <div
                       class="service-three-item d-flex justify-content-between align-items-center"
@@ -885,47 +954,80 @@
                             <h2
                               class="service-three-title tw-text-15 text-white tw-mb-4"
                             >
-                              Web & Databases
+                              <a href="#projects" class="text-white text-decoration-none">Web &amp; Backend</a>
                             </h2>
                           </div>
                           <div class="portfolio-list portfolio-two-list">
                             <ul class="d-flex tw-gap-205 flex-wrap">
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">FastAPI</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >Node.js</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">Flask</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >Express.js</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">RESTful APIs</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >React.js</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">React</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >FastAPI</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">HTML5</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >REST APIs</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">CSS3</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >MongoDB</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">MySQL</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >PostgreSQL / MySQL</a
+                                >
                               </li>
                             </ul>
                           </div>
                         </div>
                       </div>
                       <div class="service-three-thumb">
-                        <img src="assets/images/thumbs/service-three-thumb3.png" alt="Web & Databases" />
+                        <a href="#projects"
+                          ><img
+                            src="assets/images/thumbs/service-three-thumb3.png"
+                            alt="Web &amp; Backend thumbnail"
+                        /></a>
                       </div>
                     </div>
                   </div>
-                  <!-- Skill 04 -->
+
+                  <!-- Skill Item 04 -->
                   <div
                     class="service-three-single ms-auto"
                     data-aos="fade-left"
                     data-aos-duration="2000"
-                    data-aos-delay="500"
+                    data-aos-delay="300"
                   >
                     <div
                       class="service-three-item d-flex justify-content-between align-items-center"
@@ -946,44 +1048,63 @@
                             <h2
                               class="service-three-title tw-text-15 text-white tw-mb-4"
                             >
-                              Tools & Platforms
+                              <a href="#projects" class="text-white text-decoration-none">Tools &amp; Platforms</a>
                             </h2>
                           </div>
                           <div class="portfolio-list portfolio-two-list">
                             <ul class="d-flex tw-gap-205 flex-wrap">
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">Linux</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >Git &amp; GitHub</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">Git</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >Docker</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">GitHub</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >Linux</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">Docker</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >Render / Vercel</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">AWS</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >Postman</a
+                                >
                               </li>
                               <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">Render</span>
-                              </li>
-                              <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">Vercel</span>
-                              </li>
-                              <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">Postman</span>
-                              </li>
-                              <li>
-                                <span class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 border px-3 py-1 rounded">VS Code</span>
+                                <a
+                                  class="text-uppercase text-white tw-text-sm fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-heading tw-transition-3 text-decoration-none"
+                                  href="#projects"
+                                  >VS Code</a
+                                >
                               </li>
                             </ul>
                           </div>
                         </div>
                       </div>
                       <div class="service-three-thumb">
-                        <img src="assets/images/thumbs/service-three-thumb4.png" alt="Tools & Platforms" />
+                        <a href="#projects"
+                          ><img
+                            src="assets/images/thumbs/service-three-thumb4.png"
+                            alt="Tools &amp; Platforms thumbnail"
+                        /></a>
                       </div>
                     </div>
                   </div>
@@ -997,7 +1118,7 @@
         <!-- ==================== Projects Section Start ==================== -->
         <section id="projects" class="portfolio-three-area py-120 position-relative z-1">
           <div class="portfolio-three-shape position-absolute top-0 z-n1">
-            <h3 class="portfolio-three-shape-title">projects</h3>
+            <h3 class="portfolio-three-shape-title">works</h3>
           </div>
           <div class="container tw-container-1800-px">
             <div class="row">
@@ -1005,167 +1126,213 @@
                 <div
                   class="portfolio-three-wrapper d-flex justify-content-between flex-wrap align-items-start position-relative z-1"
                 >
-                  <!-- Project 1 -->
+                  <!-- Project Item 1: Ride-Hailing AI Platform -->
                   <div
-                    class="portfolio-three-item tw-rounded-lg tw-mb-705 portfolio-wrapper w-100 mb-5"
+                    class="portfolio-three-item tw-rounded-lg tw-mb-705 portfolio-wrapper"
                   >
                     <div
-                      class="portfolio-three-wrap d-flex justify-content-between flex-wrap row-gap-2 align-items-center mb-3"
+                      class="portfolio-three-wrap d-flex justify-content-between flex-wrap row-gap-2"
                     >
-                      <div>
+                      <div class="tw-mb-6">
                         <div>
-                          <h2 class="tw-text-605 fw-medium tw-mb-2">
+                          <h2 class="tw-text-605 fw-medium tw-mb-4">
                             <a
-                              class="text-heading hover-text-main-two-600 text-decoration-none tw-transition-3"
+                              class="hover-text-main-two-600 text-decoration-none"
                               href="https://github.com/AryanJha05/Ride-Hailing-AI"
                               target="_blank"
                               rel="noopener noreferrer"
+                              >Ride-Hailing Demand Forecasting &amp; Driver Allocation</a
                             >
-                              Ride-Hailing Demand Forecasting & Driver Allocation
-                            </a>
                           </h2>
                         </div>
-                        <div class="portfolio-three-list portfolio-list mb-3">
+                        <div class="portfolio-three-list portfolio-list">
                           <ul class="d-flex tw-gap-205 flex-wrap">
                             <li>
-                              <span class="text-uppercase text-heading fw-medium border px-3 py-1 rounded hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3">REACT</span>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3 text-decoration-none"
+                                href="https://github.com/AryanJha05/Ride-Hailing-AI"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >PYTHON</a
+                              >
                             </li>
                             <li>
-                              <span class="text-uppercase text-heading fw-medium border px-3 py-1 rounded hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3">PYTHON</span>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3 text-decoration-none"
+                                href="https://github.com/AryanJha05/Ride-Hailing-AI"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >LLM AGENT</a
+                              >
                             </li>
                             <li>
-                              <span class="text-uppercase text-heading fw-medium border px-3 py-1 rounded hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3">LLM</span>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3 text-decoration-none"
+                                href="https://github.com/AryanJha05/Ride-Hailing-AI"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >FASTAPI</a
+                              >
                             </li>
                             <li>
-                              <span class="text-uppercase text-heading fw-medium border px-3 py-1 rounded hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3">LEAFLET</span>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3 text-decoration-none"
+                                href="https://github.com/AryanJha05/Ride-Hailing-AI"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >REACT</a
+                              >
                             </li>
                             <li>
-                              <span class="text-uppercase text-heading fw-medium border px-3 py-1 rounded hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3">2026</span>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3 text-decoration-none"
+                                href="https://github.com/AryanJha05/Ride-Hailing-AI"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >AI / ML</a
+                              >
                             </li>
                           </ul>
                         </div>
                       </div>
                       <div>
-                        <a
-                          class="portfolio-three-btn tw-w-12 tw-h-12 lh-1 d-inline-flex justify-content-center align-items-center text-heading rounded-circle hover-bg-main-two-600 hover-text-white text-decoration-none tw-transition-3"
-                          href="https://github.com/AryanJha05/Ride-Hailing-AI"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title="View Source Code"
-                          ><i class="ph ph-arrow-up-right tw-text-xl"></i
-                        ></a>
+                        <div class="portfolio-three-button">
+                          <a
+                            class="portfolio-three-btn tw-w-8 tw-h-8 lh-1 d-inline-flex justify-content-center align-items-center text-heading rounded-circle hover-bg-main-two-600 hover-text-white text-decoration-none"
+                            href="https://github.com/AryanJha05/Ride-Hailing-AI"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="View Source on GitHub"
+                            ><i class="ph ph-arrow-up-right"></i
+                          ></a>
+                        </div>
                       </div>
                     </div>
-                    <ul class="tw-text-lg text-neutral-700 tw-mb-4 ps-4">
-                      <li class="tw-mb-1">Developed an AI-powered ride-hailing platform for demand forecasting, driver allocation, and geospatial visualization.</li>
-                      <li class="tw-mb-1">Built the LLM-based Driver Coaching Assistant to generate personalized driving recommendations using trip history and demand-zone patterns.</li>
-                      <li>Collaborated within a cross-functional team to integrate the LLM module with the React dashboard and deliver an end-to-end solution.</li>
-                    </ul>
+                    <p class="tw-text-base text-neutral-600 tw-mb-4">
+                      AI-driven demand forecasting, driver allocation, and intelligent coaching assistant with trip analytics and full React dashboard integration.
+                    </p>
                     <div
-                      class="portfolio-thumb not-hide-cursor fw-bold mb-0 tw-rounded-lg overflow-hidden border"
+                      class="portfolio-thumb not-hide-cursor fw-bold mb-0 tw-rounded-lg"
                       data-cursor="View"
                     >
                       <a
+                        class="d-block cursor-hide tw-rounded-lg"
                         href="https://github.com/AryanJha05/Ride-Hailing-AI"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="d-block w-100"
-                      >
-                        <img
-                          class="w-100 tw-rounded-lg object-fit-cover"
+                        ><img
+                          class="w-100 tw-rounded-lg"
                           src="assets/images/thumbs/ride-hailing-project.png"
                           alt="Ride-Hailing Demand Forecasting and Driver Allocation project"
-                          style="max-height: 540px;"
-                        />
-                      </a>
+                      /></a>
                     </div>
                   </div>
 
-                  <!-- Project 2 -->
+                  <!-- Project Item 2: CIFAR-100 Image Classifier -->
                   <div
-                    class="portfolio-three-item tw-rounded-lg tw-mb-705 portfolio-wrapper w-100"
+                    class="portfolio-three-item tw-rounded-lg tw-mb-705 portfolio-wrapper"
                   >
                     <div
-                      class="portfolio-three-wrap d-flex justify-content-between flex-wrap row-gap-2 align-items-center mb-3"
+                      class="portfolio-three-wrap d-flex justify-content-between flex-wrap row-gap-2"
                     >
-                      <div>
+                      <div class="tw-mb-6">
                         <div>
-                          <h2 class="tw-text-605 fw-medium tw-mb-2">
+                          <h2 class="tw-text-605 fw-medium tw-mb-4">
                             <a
-                              class="text-heading hover-text-main-two-600 text-decoration-none tw-transition-3"
+                              class="hover-text-main-two-600 text-decoration-none"
                               href="https://cifar100-image-classifier.vercel.app/"
                               target="_blank"
                               rel="noopener noreferrer"
+                              >CIFAR-100 Image Classifier</a
                             >
-                              CIFAR-100 Image Classifier
-                            </a>
                           </h2>
                         </div>
-                        <div class="portfolio-three-list portfolio-list mb-3">
+                        <div class="portfolio-three-list portfolio-list">
                           <ul class="d-flex tw-gap-205 flex-wrap">
                             <li>
-                              <span class="text-uppercase text-heading fw-medium border px-3 py-1 rounded hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3">PYTHON</span>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3 text-decoration-none"
+                                href="https://cifar100-image-classifier.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >PYTHON</a
+                              >
                             </li>
                             <li>
-                              <span class="text-uppercase text-heading fw-medium border px-3 py-1 rounded hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3">TENSORFLOW/KERAS</span>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3 text-decoration-none"
+                                href="https://cifar100-image-classifier.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >TENSORFLOW</a
+                              >
                             </li>
                             <li>
-                              <span class="text-uppercase text-heading fw-medium border px-3 py-1 rounded hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3">FASTAPI</span>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3 text-decoration-none"
+                                href="https://cifar100-image-classifier.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >FASTAPI</a
+                              >
                             </li>
                             <li>
-                              <span class="text-uppercase text-heading fw-medium border px-3 py-1 rounded hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3">DOCKER</span>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3 text-decoration-none"
+                                href="https://cifar100-image-classifier.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >DOCKER</a
+                              >
                             </li>
                             <li>
-                              <span class="text-uppercase text-heading fw-medium border px-3 py-1 rounded hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3">JAVASCRIPT</span>
-                            </li>
-                            <li>
-                              <span class="text-uppercase text-heading fw-medium border px-3 py-1 rounded hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3">09 2026</span>
+                              <a
+                                class="text-uppercase text-heading fw-medium position-relative z-1 hover-bg-main-two-600 hover-border-main-two-600 hover-text-white tw-transition-3 text-decoration-none"
+                                href="https://cifar100-image-classifier.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >VERCEL</a
+                              >
                             </li>
                           </ul>
                         </div>
                       </div>
-                      <div class="d-flex tw-gap-2 align-items-center">
+                      <div class="portfolio-three-button d-flex tw-gap-2">
                         <a
-                          class="tw-hover-btn bg-black text-white fw-bold tw-py-2 tw-px-6 d-inline-block hover-text-white text-uppercase tw-rounded-md text-decoration-none tw-text-sm position-relative overflow-hidden"
+                          class="portfolio-three-btn tw-w-8 tw-h-8 lh-1 d-inline-flex justify-content-center align-items-center text-heading rounded-circle hover-bg-main-two-600 hover-text-white text-decoration-none"
                           href="https://cifar100-image-classifier.vercel.app/"
                           target="_blank"
                           rel="noopener noreferrer"
-                        >
-                          LIVE DEMO
-                          <span class="tw-hover-btn-circle-dot bg-main-two-600"></span>
-                        </a>
+                          title="Live Demo"
+                          ><i class="ph ph-arrow-up-right"></i
+                        ></a>
                         <a
-                          class="tw-hover-btn bg-main-two-600 text-white fw-bold tw-py-2 tw-px-6 d-inline-block hover-text-white text-uppercase tw-rounded-md text-decoration-none tw-text-sm position-relative overflow-hidden"
+                          class="portfolio-three-btn tw-w-8 tw-h-8 lh-1 d-inline-flex justify-content-center align-items-center text-heading rounded-circle hover-bg-main-two-600 hover-text-white text-decoration-none"
                           href="https://github.com/AryanJha05/cifar100-image-classifier"
                           target="_blank"
                           rel="noopener noreferrer"
-                        >
-                          GITHUB
-                          <span class="tw-hover-btn-circle-dot bg-black"></span>
-                        </a>
+                          title="GitHub Repository"
+                          ><i class="ph-bold ph-github-logo"></i
+                        ></a>
                       </div>
                     </div>
-                    <ul class="tw-text-lg text-neutral-700 tw-mb-4 ps-4">
-                      <li class="tw-mb-1">Built an EfficientNetV2B0 classifier using transfer learning, achieving 74.2% accuracy across 100 CIFAR-100 classes.</li>
-                      <li>Developed a FastAPI inference backend with OOD rejection using free-energy and prototype similarity; deployed backend on Render and integrated with a Vercel frontend.</li>
-                    </ul>
+                    <p class="tw-text-base text-neutral-600 tw-mb-4">
+                      EfficientNetV2B0 computer vision classifier with 74.2% top-1 accuracy on 100 classes, FastAPI inference backend, OOD rejection, Render deployment, and Vercel UI.
+                    </p>
                     <div
-                      class="portfolio-thumb not-hide-cursor fw-bold mb-0 tw-rounded-lg overflow-hidden border"
+                      class="portfolio-thumb not-hide-cursor fw-bold mb-0 tw-rounded-lg"
                       data-cursor="View"
                     >
                       <a
+                        class="d-block cursor-hide tw-rounded-lg"
                         href="https://cifar100-image-classifier.vercel.app/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="d-block w-100"
-                      >
-                        <img
-                          class="w-100 tw-rounded-lg object-fit-cover"
+                        ><img
+                          class="w-100 tw-rounded-lg"
                           src="assets/images/thumbs/cifar100-project.png"
                           alt="CIFAR-100 Image Classifier project"
-                          style="max-height: 540px;"
-                        />
-                      </a>
+                      /></a>
                     </div>
                   </div>
                 </div>
@@ -1175,143 +1342,232 @@
         </section>
         <!-- ==================== Projects Section End ==================== -->
 
-        <!-- ==================== Achievements & Education Start ==================== -->
-        <div id="achievements" class="feature-three-area py-120 position-relative z-1 bg-black">
+        <!-- ==================== Achievements & Education Section Start ==================== -->
+        <div id="achievements" class="feature-three-area py-120 position-relative z-1">
           <div class="container tw-container-1800-px">
-            <div class="row justify-content-center tw-mb-15">
-              <div class="col-xl-10 text-center">
-                <h2 class="text-white tw-text-15 text-uppercase">Education & Achievements</h2>
-                <p class="text-neutral-300 tw-text-xl mt-2">Academic background, competitive programming milestones, and hackathon participation.</p>
-              </div>
-            </div>
             <div class="row">
               <div class="col-xl-12">
                 <div class="feature-three-wrapper hover__widget">
-                  <!-- Education 1 -->
+                  <!-- Milestone 01 -->
                   <div
-                    class="feature-three-single current hover__reveal-item py-4 border-bottom border-neutral-800"
+                    class="feature-three-single current hover__reveal-item"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="200"
                   >
                     <div
-                      class="feature-three-item d-flex justify-content-between align-items-center flex-wrap"
+                      class="feature-three-item d-flex justify-content-between align-items-center"
                     >
-                      <div class="feature-three-left d-flex align-items-center flex-wrap">
-                        <span class="feature-three-text tw-text-605 fw-medium text-white d-inline-block tw-w-20">01</span>
-                        <span class="feature-three-text tw-text-605 fw-medium text-white d-inline-block tw-w-160-px">Parul University</span>
-                        <div class="ms-md-4">
-                          <span class="feature-three-text tw-text-2xl fw-medium text-neutral-300 d-block">B.Tech in Computer Science & Engineering (AI & ML) — CGPA: 8.38 / 10</span>
-                          <span class="text-neutral-400 tw-text-sm d-block mt-1">Coursework: Data Structures & Algorithms · Object-Oriented Programming · Database Management Systems · Computer Networks · Artificial Intelligence · Machine Learning</span>
+                      <div class="feature-three-left d-flex align-items-center">
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20"
+                            >01</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px"
+                            >Parul University</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                            >B.Tech CSE (AI &amp; ML) — CGPA: 8.38</span
+                          >
                         </div>
                       </div>
                       <div>
-                        <span class="feature-three-text tw-text-xl fw-medium text-white d-inline-block">August 2024 – May 2028</span>
+                        <span
+                          class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                          >2022-2026</span
+                        >
                       </div>
                     </div>
+                    <div
+                      class="hover__reveal-bg bg-img"
+                      data-background-image="assets/images/thumbs/feature-three-thumb1.jpg"
+                    ></div>
                   </div>
 
-                  <!-- Education 2 -->
+                  <!-- Milestone 02 -->
                   <div
-                    class="feature-three-single hover__reveal-item py-4 border-bottom border-neutral-800"
+                    class="feature-three-single hover__reveal-item"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="200"
                   >
                     <div
-                      class="feature-three-item d-flex justify-content-between align-items-center flex-wrap"
+                      class="feature-three-item d-flex justify-content-between align-items-center"
                     >
-                      <div class="feature-three-left d-flex align-items-center flex-wrap">
-                        <span class="feature-three-text tw-text-605 fw-medium text-white d-inline-block tw-w-20">02</span>
-                        <span class="feature-three-text tw-text-605 fw-medium text-white d-inline-block tw-w-160-px">JNV Silvassa</span>
-                        <span class="feature-three-text tw-text-2xl fw-medium text-neutral-300 d-inline-block ms-md-4">12th Standard — CBSE (Percentage: 79%)</span>
+                      <div class="feature-three-left d-flex align-items-center">
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20"
+                            >02</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px"
+                            >Competitive Prog</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                            >800+ Problems Solved (LeetCode, CodeChef, Codeforces)</span
+                          >
+                        </div>
                       </div>
                       <div>
-                        <span class="feature-three-text tw-text-xl fw-medium text-white d-inline-block">May 2024</span>
+                        <span
+                          class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                          >Active</span
+                        >
                       </div>
                     </div>
+                    <div
+                      class="hover__reveal-bg bg-img"
+                      data-background-image="assets/images/thumbs/portfolio-two-thumb1.jpg"
+                    ></div>
                   </div>
 
-                  <!-- Achievement 1 -->
+                  <!-- Milestone 03 -->
                   <div
-                    class="feature-three-single hover__reveal-item py-4 border-bottom border-neutral-800"
+                    class="feature-three-single hover__reveal-item"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="200"
                   >
                     <div
-                      class="feature-three-item d-flex justify-content-between align-items-center flex-wrap"
+                      class="feature-three-item d-flex justify-content-between align-items-center"
                     >
-                      <div class="feature-three-left d-flex align-items-center flex-wrap">
-                        <span class="feature-three-text tw-text-605 fw-medium text-white d-inline-block tw-w-20">03</span>
-                        <span class="feature-three-text tw-text-605 fw-medium text-white d-inline-block tw-w-160-px">DSA & CP</span>
-                        <span class="feature-three-text tw-text-2xl fw-medium text-neutral-300 d-inline-block ms-md-4">Solved 800+ DSA problems · LeetCode Rating: 1681 · CodeChef: 1467 · Codeforces: 986</span>
+                      <div class="feature-three-left d-flex align-items-center">
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20"
+                            >03</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px"
+                            >LeetCode</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                            >Max Contest Rating: 1681 (Top 15% Worldwide)</span
+                          >
+                        </div>
                       </div>
                       <div>
-                        <span class="feature-three-text tw-text-xl fw-medium text-white d-inline-block">Active</span>
+                        <span
+                          class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                          >2024</span
+                        >
                       </div>
                     </div>
+                    <div
+                      class="hover__reveal-bg bg-img"
+                      data-background-image="assets/images/thumbs/portfolio-two-thumb2.jpg"
+                    ></div>
                   </div>
 
-                  <!-- Achievement 2 -->
+                  <!-- Milestone 04 -->
                   <div
-                    class="feature-three-single hover__reveal-item py-4 border-bottom border-neutral-800"
+                    class="feature-three-single hover__reveal-item"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="200"
                   >
                     <div
-                      class="feature-three-item d-flex justify-content-between align-items-center flex-wrap"
+                      class="feature-three-item d-flex justify-content-between align-items-center"
                     >
-                      <div class="feature-three-left d-flex align-items-center flex-wrap">
-                        <span class="feature-three-text tw-text-605 fw-medium text-white d-inline-block tw-w-20">04</span>
-                        <span class="feature-three-text tw-text-605 fw-medium text-white d-inline-block tw-w-160-px">Hackathons</span>
-                        <span class="feature-three-text tw-text-2xl fw-medium text-neutral-300 d-inline-block ms-md-4">Participant — SIH Hackathon, Odoo Hackathon, Vadodara Hackathon 6.0, and CODERZ ASSEMBLE</span>
+                      <div class="feature-three-left d-flex align-items-center">
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20"
+                            >04</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px"
+                            >CodeChef &amp; CF</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                            >CodeChef Rating 1467 (2-Star) &amp; Codeforces Rating 986</span
+                          >
+                        </div>
                       </div>
                       <div>
-                        <span class="feature-three-text tw-text-xl fw-medium text-white d-inline-block">Participant</span>
+                        <span
+                          class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                          >2024</span
+                        >
                       </div>
                     </div>
+                    <div
+                      class="hover__reveal-bg bg-img"
+                      data-background-image="assets/images/thumbs/portfolio-two-thumb3.jpg"
+                    ></div>
                   </div>
 
-                  <!-- Achievement 3 -->
+                  <!-- Milestone 05 -->
                   <div
-                    class="feature-three-single hover__reveal-item py-4 border-bottom border-neutral-800"
+                    class="feature-three-single hover__reveal-item"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="200"
                   >
                     <div
-                      class="feature-three-item d-flex justify-content-between align-items-center flex-wrap"
+                      class="feature-three-item d-flex justify-content-between align-items-center"
                     >
-                      <div class="feature-three-left d-flex align-items-center flex-wrap">
-                        <span class="feature-three-text tw-text-605 fw-medium text-white d-inline-block tw-w-20">05</span>
-                        <span class="feature-three-text tw-text-605 fw-medium text-white d-inline-block tw-w-160-px">Contests</span>
-                        <span class="feature-three-text tw-text-2xl fw-medium text-neutral-300 d-inline-block ms-md-4">Regular participant in Weekly and Biweekly Contests</span>
+                      <div class="feature-three-left d-flex align-items-center">
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-20"
+                            >05</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block tw-w-160-px"
+                            >Hackathons</span
+                          >
+                        </div>
+                        <div>
+                          <span
+                            class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                            >Top Finisher in University Engineering &amp; AI Hackathons</span
+                          >
+                        </div>
                       </div>
                       <div>
-                        <span class="feature-three-text tw-text-xl fw-medium text-white d-inline-block">Ongoing</span>
+                        <span
+                          class="feature-three-text tw-text-605 fw-medium text-white tw-transition-3 d-inline-block"
+                          >2024-2025</span
+                        >
                       </div>
                     </div>
+                    <div
+                      class="hover__reveal-bg bg-img"
+                      data-background-image="assets/images/thumbs/feature-three-thumb1.jpg"
+                    ></div>
                   </div>
-                </div>
-
-                <div class="text-center mt-5">
-                  <a
-                    class="tw-hover-btn bg-white text-black fw-bold tw-py-4 tw-px-10 d-inline-block hover-bg-main-two-600 hover-text-white text-uppercase tw-rounded-lg text-decoration-none"
-                    href="https://codolio.com/profile/SogeKing_"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    VIEW CODING PROFILE
-                    <span class="tw-hover-btn-circle-dot bg-main-two-600"></span>
-                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- ==================== Achievements & Education End ==================== -->
+        <!-- ==================== Achievements & Education Section End ==================== -->
 
         <!-- ==================== Certifications Section Start ==================== -->
         <section id="certifications" class="testimonial-three-area pt-120 tw-pb-22">
@@ -1322,137 +1578,311 @@
                   <h2
                     class="testimonial-three-title text-heading tw-text-15 tw-itm-title tw-itm-anim"
                   >
-                    Certifications & Professional Credentials
+                    Verified certifications &amp; professional credentials in Agentic AI, Large Language Models, Cloud Engineering, Computer Networks, and Python
                   </h2>
-                  <p class="tw-text-xl text-neutral-600 mt-2">
-                    Verified coursework and domain certifications in Agentic AI, Large Language Models, Cloud Data Engineering, Computer Networks, and Python.
-                  </p>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-xl-12">
-                <div class="row g-4">
-                  <!-- Cert 1 (NVIDIA DLI 1) -->
-                  <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="p-4 bg-neutral-100 tw-rounded-lg border border-2 border-success h-100 d-flex flex-column justify-content-between position-relative shadow-sm">
-                      <div>
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                          <div class="d-flex align-items-center tw-gap-3">
-                            <span class="tw-w-10 tw-h-10 rounded-circle bg-success text-white d-inline-flex align-items-center justify-content-center fw-bold">01</span>
-                            <span class="badge bg-black text-success fw-bold px-3 py-2 border border-success tw-rounded-md">NVIDIA DEEP LEARNING INSTITUTE</span>
+                <div class="testimonial-three-slider position-relative z-1">
+                  <div class="testimonial-three-active swiper-container">
+                    <div class="swiper-wrapper">
+                      <!-- Certification 1: NVIDIA Agentic AI -->
+                      <div
+                        class="testimonial-three-wrapper d-flex align-items-center tw-gap-9 tw-rounded-lg tw-mb-705 swiper-slide"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="200"
+                      >
+                        <div
+                          class="testimonial-three-thumb position-relative z-1"
+                        >
+                          <img
+                            class="w-100 h-100 tw-rounded-lg"
+                            src="assets/images/thumbs/testimonial-three-thumb1.jpg"
+                            alt="NVIDIA Agentic AI"
+                          />
+                          <div
+                            class="testimonial-three-button position-absolute start-50 top-50 translate-middle"
+                          >
+                            <a
+                              class="testimonial-three-btn tw-w-220 tw-h-220 lh-1 d-inline-flex align-items-center justify-content-center bg-white text-main-two-600 tw-text-2xl position-relative z-1 hover-text-main-two-600 rounded-circle text-decoration-none"
+                              href="https://drive.google.com/file/d/1EbSsU475evyVnet8NrVCHfcpH-4addU6/view"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              title="View Certificate"
+                            >
+                              <i class="ph-bold ph-arrow-up-right"></i>
+                              <span class="ripple"></span>
+                            </a>
                           </div>
-                          <span class="badge bg-success-subtle text-success fw-semibold px-2 py-1">Sep 1, 2026</span>
                         </div>
-                        <h3 class="tw-text-2xl fw-bold text-heading mb-2">Building Agentic AI Applications with Large Language Models</h3>
-                        <p class="tw-text-sm fw-medium text-success mb-2">Issuing Organization: NVIDIA / NVIDIA Deep Learning Institute (Howard Wright, VP)</p>
-                        <p class="tw-text-base text-neutral-600 mb-2">Official Certificate of Competency for demonstrating expertise in designing and deploying autonomous LLM agent systems.</p>
-                        <p class="tw-text-xs font-monospace text-neutral-500 mb-0">Certification ID: nEqhFn7eSAWDBAQm3DqVdw</p>
+                        <div class="testimonial-three-content w-100">
+                          <div
+                            class="d-flex align-items-center justify-content-between tw-mb-16"
+                          >
+                            <div>
+                              <span
+                                ><img
+                                  src="assets/images/icons/testimonial-three-icon.svg"
+                                  alt="icon"
+                              /></span>
+                            </div>
+                            <span class="text-main-two-600 fw-bold tw-text-sm text-uppercase">NVIDIA DLI</span>
+                          </div>
+                          <p class="tw-text-xl tw-mb-10 text-heading fw-semibold">
+                            Building Agentic AI Applications with Large Language Models
+                          </p>
+                          <div>
+                            <h4 class="tw-text-xl text-heading tw-mb-1">
+                              NVIDIA Deep Learning Institute
+                            </h4>
+                            <span class="tw-text-sm text-neutral-500 font-monospace">
+                              ID: nEqhFn7eSAWDBAQm3DqVdw • Sep 1, 2026
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                      <div class="mt-4">
-                        <a class="tw-hover-btn bg-success text-black fw-bold tw-py-3 tw-px-6 d-inline-block text-uppercase tw-rounded-md text-decoration-none tw-text-sm hover-text-white position-relative overflow-hidden" href="https://drive.google.com/file/d/1EbSsU475evyVnet8NrVCHfcpH-4addU6/view" target="_blank" rel="noopener noreferrer">
-                          VIEW CERTIFICATE
-                          <span class="tw-hover-btn-circle-dot bg-black"></span>
-                        </a>
+
+                      <!-- Certification 2: NVIDIA RAG Agents -->
+                      <div
+                        class="testimonial-three-wrapper d-flex align-items-center tw-gap-9 tw-rounded-lg tw-mb-705 swiper-slide"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="300"
+                      >
+                        <div
+                          class="testimonial-three-thumb position-relative z-1"
+                        >
+                          <img
+                            class="w-100 h-100 tw-rounded-lg"
+                            src="assets/images/thumbs/testimonial-three-thumb2.jpg"
+                            alt="NVIDIA RAG Agents"
+                          />
+                          <div
+                            class="testimonial-three-button position-absolute start-50 top-50 translate-middle"
+                          >
+                            <a
+                              class="testimonial-three-btn tw-w-220 tw-h-220 lh-1 d-inline-flex align-items-center justify-content-center bg-white text-main-two-600 tw-text-2xl position-relative z-1 hover-text-main-two-600 rounded-circle text-decoration-none"
+                              href="https://drive.google.com/file/d/1HeZn-4C4h9t84LouWKFOloH6jQfbYpYE/view"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              title="View Certificate"
+                            >
+                              <i class="ph-bold ph-arrow-up-right"></i>
+                              <span class="ripple"></span>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="testimonial-three-content w-100">
+                          <div
+                            class="d-flex align-items-center justify-content-between tw-mb-16"
+                          >
+                            <div>
+                              <span
+                                ><img
+                                  src="assets/images/icons/testimonial-three-icon.svg"
+                                  alt="icon"
+                              /></span>
+                            </div>
+                            <span class="text-main-two-600 fw-bold tw-text-sm text-uppercase">NVIDIA DLI</span>
+                          </div>
+                          <p class="tw-text-xl tw-mb-10 text-heading fw-semibold">
+                            Building RAG Agents with LLMs
+                          </p>
+                          <div>
+                            <h4 class="tw-text-xl text-heading tw-mb-1">
+                              NVIDIA Deep Learning Institute
+                            </h4>
+                            <span class="tw-text-sm text-neutral-500 font-monospace">
+                              ID: 6FOLSpbQTnKc0f9m6oEm3A • Aug 31, 2026
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Certification 3: AWS Academy Data Engineering -->
+                      <div
+                        class="testimonial-three-wrapper d-flex align-items-center tw-gap-9 tw-rounded-lg tw-mb-705 swiper-slide"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="400"
+                      >
+                        <div
+                          class="testimonial-three-thumb position-relative z-1"
+                        >
+                          <img
+                            class="w-100 h-100 tw-rounded-lg"
+                            src="assets/images/thumbs/testimonial-three-thumb1.jpg"
+                            alt="AWS Academy Data Engineering"
+                          />
+                          <div
+                            class="testimonial-three-button position-absolute start-50 top-50 translate-middle"
+                          >
+                            <a
+                              class="testimonial-three-btn tw-w-220 tw-h-220 lh-1 d-inline-flex align-items-center justify-content-center bg-white text-main-two-600 tw-text-2xl position-relative z-1 hover-text-main-two-600 rounded-circle text-decoration-none"
+                              href="https://drive.google.com/file/d/1w6kgBxDuHHw9cKuR0jXoYIbE2ITgkOsz/view"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              title="View Certificate"
+                            >
+                              <i class="ph-bold ph-arrow-up-right"></i>
+                              <span class="ripple"></span>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="testimonial-three-content w-100">
+                          <div
+                            class="d-flex align-items-center justify-content-between tw-mb-16"
+                          >
+                            <div>
+                              <span
+                                ><img
+                                  src="assets/images/icons/testimonial-three-icon.svg"
+                                  alt="icon"
+                              /></span>
+                            </div>
+                            <span class="text-main-two-600 fw-bold tw-text-sm text-uppercase">AWS ACADEMY</span>
+                          </div>
+                          <p class="tw-text-xl tw-mb-10 text-heading fw-semibold">
+                            AWS Academy Graduate - Data Engineering
+                          </p>
+                          <div>
+                            <h4 class="tw-text-xl text-heading tw-mb-1">
+                              AWS Academy
+                            </h4>
+                            <span class="tw-text-sm text-neutral-500 font-monospace">
+                              40 Hours • 03/14/2026 • <a href="https://www.credly.com/go/ZoErLegI" target="_blank" rel="noopener noreferrer" class="text-main-two-600 text-decoration-underline">Credly Badge</a>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Certification 4: Computer Networks and Internet Protocol -->
+                      <div
+                        class="testimonial-three-wrapper d-flex align-items-center tw-gap-9 tw-rounded-lg tw-mb-705 swiper-slide"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="500"
+                      >
+                        <div
+                          class="testimonial-three-thumb position-relative z-1"
+                        >
+                          <img
+                            class="w-100 h-100 tw-rounded-lg"
+                            src="assets/images/thumbs/testimonial-three-thumb2.jpg"
+                            alt="Computer Networks NPTEL"
+                          />
+                          <div
+                            class="testimonial-three-button position-absolute start-50 top-50 translate-middle"
+                          >
+                            <a
+                              class="testimonial-three-btn tw-w-220 tw-h-220 lh-1 d-inline-flex align-items-center justify-content-center bg-white text-main-two-600 tw-text-2xl position-relative z-1 hover-text-main-two-600 rounded-circle text-decoration-none"
+                              href="https://drive.google.com/file/d/1RvysGmebDEiy2tjmPejcx7hAATBuUlPu/view"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              title="View Certificate"
+                            >
+                              <i class="ph-bold ph-arrow-up-right"></i>
+                              <span class="ripple"></span>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="testimonial-three-content w-100">
+                          <div
+                            class="d-flex align-items-center justify-content-between tw-mb-16"
+                          >
+                            <div>
+                              <span
+                                ><img
+                                  src="assets/images/icons/testimonial-three-icon.svg"
+                                  alt="icon"
+                              /></span>
+                            </div>
+                            <span class="text-main-two-600 fw-bold tw-text-sm text-uppercase">NPTEL / IIT KHARAGPUR</span>
+                          </div>
+                          <p class="tw-text-xl tw-mb-10 text-heading fw-semibold">
+                            Computer Networks and Internet Protocol
+                          </p>
+                          <div>
+                            <h4 class="tw-text-xl text-heading tw-mb-1">
+                              NPTEL (MoE, Govt. of India) &amp; IIT Kharagpur
+                            </h4>
+                            <span class="tw-text-sm text-neutral-500 font-monospace">
+                              ELITE NPTEL (68%) • Roll: NPTEL26CS35S2685405792
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Certification 5: Python Certification -->
+                      <div
+                        class="testimonial-three-wrapper d-flex align-items-center tw-gap-9 tw-rounded-lg tw-mb-705 swiper-slide"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="600"
+                      >
+                        <div
+                          class="testimonial-three-thumb position-relative z-1"
+                        >
+                          <img
+                            class="w-100 h-100 tw-rounded-lg"
+                            src="assets/images/thumbs/testimonial-three-thumb1.jpg"
+                            alt="Python Certification IBM"
+                          />
+                          <div
+                            class="testimonial-three-button position-absolute start-50 top-50 translate-middle"
+                          >
+                            <a
+                              class="testimonial-three-btn tw-w-220 tw-h-220 lh-1 d-inline-flex align-items-center justify-content-center bg-white text-main-two-600 tw-text-2xl position-relative z-1 hover-text-main-two-600 rounded-circle text-decoration-none"
+                              href="https://drive.google.com/file/d/1GeWdOD68jkpl9n5gPxMy-HF9fB4VsBM7/view"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              title="View Certificate"
+                            >
+                              <i class="ph-bold ph-arrow-up-right"></i>
+                              <span class="ripple"></span>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="testimonial-three-content w-100">
+                          <div
+                            class="d-flex align-items-center justify-content-between tw-mb-16"
+                          >
+                            <div>
+                              <span
+                                ><img
+                                  src="assets/images/icons/testimonial-three-icon.svg"
+                                  alt="icon"
+                              /></span>
+                            </div>
+                            <span class="text-main-two-600 fw-bold tw-text-sm text-uppercase">IBM / IBMCE</span>
+                          </div>
+                          <p class="tw-text-xl tw-mb-10 text-heading fw-semibold">
+                            Python Certification
+                          </p>
+                          <div>
+                            <h4 class="tw-text-xl text-heading tw-mb-1">
+                              IBM Career Education (IBMCE)
+                            </h4>
+                            <span class="tw-text-sm text-neutral-500 font-monospace">
+                              Code: CEPYT1IN (IBMCE) • July 23, 2025
+                            </span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  <!-- Cert 2 (NVIDIA DLI 2) -->
-                  <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                    <div class="p-4 bg-neutral-100 tw-rounded-lg border border-2 border-success h-100 d-flex flex-column justify-content-between position-relative shadow-sm">
-                      <div>
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                          <div class="d-flex align-items-center tw-gap-3">
-                            <span class="tw-w-10 tw-h-10 rounded-circle bg-success text-white d-inline-flex align-items-center justify-content-center fw-bold">02</span>
-                            <span class="badge bg-black text-success fw-bold px-3 py-2 border border-success tw-rounded-md">NVIDIA DEEP LEARNING INSTITUTE</span>
-                          </div>
-                          <span class="badge bg-success-subtle text-success fw-semibold px-2 py-1">Aug 31, 2026</span>
-                        </div>
-                        <h3 class="tw-text-2xl fw-bold text-heading mb-2">Building RAG Agents with LLMs</h3>
-                        <p class="tw-text-sm fw-medium text-success mb-2">Issuing Organization: NVIDIA / NVIDIA Deep Learning Institute (Howard Wright, VP)</p>
-                        <p class="tw-text-base text-neutral-600 mb-2">Official Certificate of Competency for demonstrating expertise in Retrieval-Augmented Generation (RAG) agent architecture.</p>
-                        <p class="tw-text-xs font-monospace text-neutral-500 mb-0">Certification ID: 6FOLSpbQTnKc0f9m6oEm3A</p>
-                      </div>
-                      <div class="mt-4">
-                        <a class="tw-hover-btn bg-success text-black fw-bold tw-py-3 tw-px-6 d-inline-block text-uppercase tw-rounded-md text-decoration-none tw-text-sm hover-text-white position-relative overflow-hidden" href="https://drive.google.com/file/d/1HeZn-4C4h9t84LouWKFOloH6jQfbYpYE/view" target="_blank" rel="noopener noreferrer">
-                          VIEW CERTIFICATE
-                          <span class="tw-hover-btn-circle-dot bg-black"></span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Cert 3 -->
-                  <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="p-4 bg-neutral-100 tw-rounded-lg border h-100 d-flex flex-column justify-content-between">
-                      <div>
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                          <div class="d-flex align-items-center tw-gap-3">
-                            <span class="tw-w-10 tw-h-10 rounded-circle bg-black text-white d-inline-flex align-items-center justify-content-center fw-bold">03</span>
-                            <h3 class="tw-text-xl fw-bold text-heading mb-0">AWS Academy Graduate - Data Engineering</h3>
-                          </div>
-                          <span class="badge bg-warning-subtle text-dark fw-semibold px-2 py-1">40 Hours • 03/14/2026</span>
-                        </div>
-                        <p class="tw-text-sm fw-medium text-neutral-700 mb-2">Issuing Organization: AWS Academy</p>
-                        <p class="tw-text-base text-neutral-600 mb-2">Certificate of Completion for 40 hours of cloud data engineering pipelines, data lakes, and analytics architecture.</p>
-                        <p class="tw-text-xs font-monospace text-neutral-500 mb-0">Digital Badge: <a href="https://www.credly.com/go/ZoErLegI" target="_blank" rel="noopener noreferrer" class="text-primary text-decoration-underline">Credly Badge</a></p>
-                      </div>
-                      <div class="mt-4">
-                        <a class="tw-hover-btn bg-black text-white fw-bold tw-py-3 tw-px-6 d-inline-block text-uppercase tw-rounded-md text-decoration-none tw-text-sm position-relative overflow-hidden" href="https://drive.google.com/file/d/1w6kgBxDuHHw9cKuR0jXoYIbE2ITgkOsz/view" target="_blank" rel="noopener noreferrer">
-                          VIEW CERTIFICATE
-                          <span class="tw-hover-btn-circle-dot bg-main-two-600"></span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Cert 4 -->
-                  <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                    <div class="p-4 bg-neutral-100 tw-rounded-lg border h-100 d-flex flex-column justify-content-between">
-                      <div>
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                          <div class="d-flex align-items-center tw-gap-3">
-                            <span class="tw-w-10 tw-h-10 rounded-circle bg-black text-white d-inline-flex align-items-center justify-content-center fw-bold">04</span>
-                            <h3 class="tw-text-xl fw-bold text-heading mb-0">Computer Networks and Internet Protocol</h3>
-                          </div>
-                          <span class="badge bg-danger text-white fw-bold px-2 py-1">ELITE NPTEL (68%)</span>
-                        </div>
-                        <p class="tw-text-sm fw-medium text-neutral-700 mb-2">Issuing Organization: NPTEL (MoE, Govt. of India) & IIT Kharagpur</p>
-                        <p class="tw-text-base text-neutral-600 mb-2">Elite 12-week course certification (Jan-Apr 2026) covering TCP/IP stack, network architecture, and routing protocols.</p>
-                        <p class="tw-text-xs font-monospace text-neutral-500 mb-0">Roll No: NPTEL26CS35S2685405792</p>
-                      </div>
-                      <div class="mt-4">
-                        <a class="tw-hover-btn bg-black text-white fw-bold tw-py-3 tw-px-6 d-inline-block text-uppercase tw-rounded-md text-decoration-none tw-text-sm position-relative overflow-hidden" href="https://drive.google.com/file/d/1RvysGmebDEiy2tjmPejcx7hAATBuUlPu/view" target="_blank" rel="noopener noreferrer">
-                          VIEW CERTIFICATE
-                          <span class="tw-hover-btn-circle-dot bg-main-two-600"></span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Cert 5 -->
-                  <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <div class="p-4 bg-neutral-100 tw-rounded-lg border h-100 d-flex flex-column justify-content-between">
-                      <div>
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                          <div class="d-flex align-items-center tw-gap-3">
-                            <span class="tw-w-10 tw-h-10 rounded-circle bg-black text-white d-inline-flex align-items-center justify-content-center fw-bold">05</span>
-                            <h3 class="tw-text-xl fw-bold text-heading mb-0">Python Certification</h3>
-                          </div>
-                          <span class="badge bg-secondary text-white fw-semibold px-2 py-1">July 23, 2025</span>
-                        </div>
-                        <p class="tw-text-sm fw-medium text-neutral-700 mb-2">Issuing Organization: IBM / IBM Career Education (IBMCE)</p>
-                        <p class="tw-text-base text-neutral-600 mb-2">Official technical course completion in Python programming provided by IBM Career Education & IBM Developer Skills Network.</p>
-                        <p class="tw-text-xs font-monospace text-neutral-500 mb-0">Course Code: CEPYT1IN (IBMCE)</p>
-                      </div>
-                      <div class="mt-4">
-                        <a class="tw-hover-btn bg-black text-white fw-bold tw-py-3 tw-px-6 d-inline-block text-uppercase tw-rounded-md text-decoration-none tw-text-sm position-relative overflow-hidden" href="https://drive.google.com/file/d/1GeWdOD68jkpl9n5gPxMy-HF9fB4VsBM7/view" target="_blank" rel="noopener noreferrer">
-                          VIEW CERTIFICATE
-                          <span class="tw-hover-btn-circle-dot bg-main-two-600"></span>
-                        </a>
-                      </div>
-                    </div>
+                  <!-- Slider Arrows -->
+                  <div class="d-flex justify-content-center align-items-center tw-gap-4 mt-4">
+                    <button class="slider-prev tw-w-12 tw-h-12 rounded-circle border border-neutral-300 bg-white text-heading hover-bg-main-two-600 hover-text-white tw-transition-3 d-inline-flex justify-content-center align-items-center" aria-label="Previous Slide">
+                      <i class="ph ph-arrow-left tw-text-xl"></i>
+                    </button>
+                    <button class="slider-next tw-w-12 tw-h-12 rounded-circle border border-neutral-300 bg-white text-heading hover-bg-main-two-600 hover-text-white tw-transition-3 d-inline-flex justify-content-center align-items-center" aria-label="Next Slide">
+                      <i class="ph ph-arrow-right tw-text-xl"></i>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1461,7 +1891,7 @@
         </section>
         <!-- ==================== Certifications Section End ==================== -->
 
-        <!-- ==================== Contact Section Start ==================== -->
+        <!-- ==================== Contact & Footer Section Start ==================== -->
         <section
           id="contact"
           class="footer-three-area pt-120 tw-pb-10 position-relative z-1"
@@ -1477,7 +1907,7 @@
                 >
                   <div class="tw-mb-9">
                     <h2 class="tw-text-15 text-white tw-char-animation">
-                      LET'S BUILD SOMETHING.
+                      Let’s create something meaningful
                     </h2>
                   </div>
                   <div
@@ -1485,7 +1915,7 @@
                   >
                     <a
                       class="tw-text-2xl fw-medium text-main-600 hover-underline hover-text-white text-decoration-none"
-                      href="mailto:aryan42006@gmail.com?subject=Portfolio%20Contact%20%E2%80%94%20Aryan%20Jha"
+                      href="mailto:aryan42006@gmail.com"
                       >aryan42006@gmail.com</a
                     >
                     <span class="tw-text-2xl fw-medium text-main-600">//</span>
@@ -1500,10 +1930,10 @@
                   >
                     <div class="footer-three-top-thumb tw-w-160-px">
                       <img
-                        class="tw-rounded-lg w-100 object-fit-cover"
+                        class="tw-rounded-lg w-100"
+                        style="height: 120px; object-fit: cover;"
                         src="assets/images/aryan-profile.png"
-                        alt="Aryan Jha"
-                        style="height: 140px;"
+                        alt="Aryan Jha Profile"
                       />
                     </div>
                     <div
@@ -1513,10 +1943,10 @@
                         <h3 class="tw-text-xl text-white tw-mb-2">
                           Aryan Jha
                         </h3>
-                        <p class="text-white">B.Tech CSE (AI & ML) Student</p>
+                        <p class="text-white">Software Engineer &amp; AI/ML Aspirant</p>
                       </div>
                       <div class="footer-three-social">
-                        <ul class="d-flex align-items-center tw-gap-2 list-unstyled mb-0">
+                        <ul class="d-flex align-items-center tw-gap-1">
                           <li>
                             <a
                               class="tw-w-11 tw-h-101 lh-1 d-inline-flex align-items-center justify-content-center tw-rounded-lg tw-text-xl text-heading hover-bg-main-600 hover-text-heading text-decoration-none"
@@ -1524,7 +1954,7 @@
                               target="_blank"
                               rel="noopener noreferrer"
                               title="LinkedIn"
-                              ><i class="ph ph-linkedin-logo"></i
+                              ><i class="ph-bold ph-linkedin-logo"></i
                             ></a>
                           </li>
                           <li>
@@ -1534,7 +1964,7 @@
                               target="_blank"
                               rel="noopener noreferrer"
                               title="GitHub"
-                              ><i class="ph ph-github-logo"></i
+                              ><i class="ph-bold ph-github-logo"></i
                             ></a>
                           </li>
                           <li>
@@ -1544,7 +1974,7 @@
                               target="_blank"
                               rel="noopener noreferrer"
                               title="Codolio"
-                              ><i class="ph ph-code"></i
+                              ><i class="ph-bold ph-code-simple"></i
                             ></a>
                           </li>
                         </ul>
@@ -1560,129 +1990,72 @@
                   data-aos-duration="1000"
                   data-aos-delay="300"
                 >
-                  <form id="contact-form" class="contact-form" novalidate>
+                  <form id="contact-form" action="#">
                     <div class="row">
-                      <!-- Name Field -->
                       <div class="col-xl-12">
-                        <div class="position-relative tw-mb-5">
-                          <label for="contact-name" class="form-label text-white tw-text-sm fw-medium tw-mb-2 d-block">
-                            Your Name <span class="text-main-600" aria-hidden="true">*</span>
-                          </label>
+                        <div class="position-relative tw-mb-7">
                           <input
-                            type="text"
                             id="contact-name"
                             name="name"
-                            required
-                            minlength="2"
-                            autocomplete="name"
-                            class="form-control bg-transparent shadow-none tw-rounded-lg text-white tw-ps-6 tw-pe-6 tw-placeholder-text-neutral-100 focus-border-main-600 tw-h-16 focus-tw-placeholder-text-hidden tw-placeholder-transition-2"
+                            type="text"
+                            class="form-control bg-transparent shadow-none tw-rounded-lg text-white tw-ps-7 tw-pe-13 tw-placeholder-text-neutral-100 focus-border-main-600 tw-h-18 focus-tw-placeholder-text-hidden tw-placeholder-transition-2"
                             placeholder="Your Name"
-                            aria-describedby="contact-name-error"
+                            required
                           />
-                          <div id="contact-name-error" class="contact-field-error text-danger tw-text-sm tw-mt-1 d-none" role="alert" aria-live="polite">
-                            Please enter your name (at least 2 characters).
-                          </div>
+                          <span id="contact-name-error" class="contact-field-error d-none">Please enter your name.</span>
                         </div>
                       </div>
-
-                      <!-- Email Field -->
                       <div class="col-xl-12">
-                        <div class="position-relative tw-mb-5">
-                          <label for="contact-email" class="form-label text-white tw-text-sm fw-medium tw-mb-2 d-block">
-                            Email Address <span class="text-main-600" aria-hidden="true">*</span>
-                          </label>
+                        <div class="position-relative tw-mb-7">
                           <input
-                            type="email"
                             id="contact-email"
                             name="email"
-                            required
-                            autocomplete="email"
-                            class="form-control bg-transparent shadow-none tw-rounded-lg text-white tw-ps-6 tw-pe-6 tw-placeholder-text-neutral-100 focus-border-main-600 tw-h-16 focus-tw-placeholder-text-hidden tw-placeholder-transition-2"
+                            type="email"
+                            class="form-control bg-transparent shadow-none tw-rounded-lg text-white tw-ps-7 tw-pe-13 tw-placeholder-text-neutral-100 focus-border-main-600 tw-h-18 focus-tw-placeholder-text-hidden tw-placeholder-transition-2"
                             placeholder="Email Address"
-                            aria-describedby="contact-email-error"
+                            required
                           />
-                          <div id="contact-email-error" class="contact-field-error text-danger tw-text-sm tw-mt-1 d-none" role="alert" aria-live="polite">
-                            Please enter a valid email address.
-                          </div>
+                          <span id="contact-email-error" class="contact-field-error d-none">Please enter a valid email address.</span>
                         </div>
                       </div>
-
-                      <!-- Subject Field -->
                       <div class="col-xl-12">
-                        <div class="position-relative tw-mb-5">
-                          <label for="contact-subject" class="form-label text-white tw-text-sm fw-medium tw-mb-2 d-block">
-                            Subject <span class="text-main-600" aria-hidden="true">*</span>
-                          </label>
+                        <div class="position-relative tw-mb-7">
                           <input
-                            type="text"
                             id="contact-subject"
                             name="subject"
+                            type="text"
+                            class="form-control bg-transparent shadow-none tw-rounded-lg text-white tw-ps-7 tw-pe-13 tw-placeholder-text-neutral-100 focus-border-main-600 tw-h-18 focus-tw-placeholder-text-hidden tw-placeholder-transition-2"
+                            placeholder="Subject"
                             required
-                            minlength="2"
-                            class="form-control bg-transparent shadow-none tw-rounded-lg text-white tw-ps-6 tw-pe-6 tw-placeholder-text-neutral-100 focus-border-main-600 tw-h-16 focus-tw-placeholder-text-hidden tw-placeholder-transition-2"
-                            placeholder="Subject (e.g. Project Discussion / Collaboration)"
-                            aria-describedby="contact-subject-error"
                           />
-                          <div id="contact-subject-error" class="contact-field-error text-danger tw-text-sm tw-mt-1 d-none" role="alert" aria-live="polite">
-                            Please enter a subject (at least 2 characters).
-                          </div>
+                          <span id="contact-subject-error" class="contact-field-error d-none">Please enter a subject.</span>
                         </div>
                       </div>
-
-                      <!-- Message Field -->
                       <div class="col-xl-12">
-                        <div class="position-relative tw-mb-6">
-                          <label for="contact-message" class="form-label text-white tw-text-sm fw-medium tw-mb-2 d-block">
-                            Message <span class="text-main-600" aria-hidden="true">*</span>
-                          </label>
+                        <div class="position-relative tw-mb-7">
                           <textarea
                             id="contact-message"
                             name="message"
+                            class="form-control bg-transparent shadow-none tw-h-196-px tw-rounded-lg text-white tw-ps-7 tw-pe-13 tw-placeholder-text-neutral-100 focus-border-main-600 focus-tw-placeholder-text-hidden tw-placeholder-transition-2"
+                            placeholder="Your Message"
                             required
-                            minlength="5"
-                            rows="4"
-                            class="form-control bg-transparent shadow-none tw-rounded-lg text-white tw-ps-6 tw-pe-6 tw-py-4 tw-placeholder-text-neutral-100 focus-border-main-600 focus-tw-placeholder-text-hidden tw-placeholder-transition-2"
-                            placeholder="Your Message..."
-                            aria-describedby="contact-message-error"
                           ></textarea>
-                          <div id="contact-message-error" class="contact-field-error text-danger tw-text-sm tw-mt-1 d-none" role="alert" aria-live="polite">
-                            Please enter your message (at least 5 characters).
-                          </div>
+                          <span id="contact-message-error" class="contact-field-error d-none">Please enter your message.</span>
                         </div>
                       </div>
-
-                      <!-- Submit Button -->
                       <div class="col-xl-12">
+                        <div id="contact-status-alert" class="alert d-none tw-mb-6" role="alert"></div>
                         <div class="contact-button">
                           <button
-                            type="submit"
                             id="contact-submit-btn"
-                            class="tw-hover-btn bg-main-600 text-heading tw-text-xl fw-bold tw-py-4 tw-px-10 d-inline-flex align-items-center justify-content-center w-100 hover-text-heading hover-bg-white tw-transition-3 tw-rounded-lg border-0"
+                            type="submit"
+                            class="tw-hover-btn bg-main-two-600 text-white fw-bold tw-py-4 tw-px-10 d-inline-block hover-text-white text-uppercase tw-rounded-md"
                           >
                             <span class="contact-btn-spinner spinner-border spinner-border-sm me-2 d-none" role="status" aria-hidden="true"></span>
-                            <span class="contact-btn-text">SEND MESSAGE</span>
+                            <span class="contact-btn-text">Send message</span>
+                            <span class="tw-hover-btn-circle-dot bg-black"></span>
                           </button>
                         </div>
-
-                        <!-- Direct Email Option -->
-                        <div class="tw-mt-4 text-center text-md-start">
-                          <p class="tw-text-base text-neutral-300 mb-0">
-                            Or email directly:
-                            <a
-                              href="mailto:aryan42006@gmail.com?subject=Portfolio%20Contact%20%E2%80%94%20Aryan%20Jha"
-                              class="text-main-600 hover-underline hover-text-white fw-semibold text-decoration-none"
-                              >aryan42006@gmail.com</a
-                            >
-                          </p>
-                        </div>
-
-                        <!-- Accessible Feedback Container -->
-                        <div
-                          id="contact-status-alert"
-                          class="tw-mt-4 d-none tw-rounded-lg tw-p-4"
-                          role="status"
-                          aria-live="polite"
-                        ></div>
                       </div>
                     </div>
                   </form>
@@ -1690,59 +2063,13 @@
               </div>
             </div>
           </div>
-          <div class="footer-three-border tw-px-18 tw-mb-10">
-            <div class="container-fluid gx-0">
-              <div class="row">
-                <div class="col-xl-12">
+          <div>
+            <div class="container tw-container-1800-px">
+              <div class="row align-items-center">
+                <div class="col-12">
                   <div
-                    class="footer-three-middile d-flex align-items-center justify-content-between flex-wrap gap-4"
+                    class="footer-three-border tw-py-8 d-flex justify-content-between align-items-center flex-wrap row-gap-4 border-top border-neutral-800"
                   >
-                    <div
-                      data-aos="fade-up"
-                      data-aos-duration="1000"
-                      data-aos-delay="200"
-                    >
-                      <h4 class="tw-text-2xl text-white tw-mb-2">
-                        Quick Links
-                      </h4>
-                      <ul class="d-flex tw-gap-3 flex-wrap list-unstyled mb-0">
-                        <li>
-                          <a class="tw-text-lg text-white text-decoration-none" href="#home"
-                            >Home,</a
-                          >
-                        </li>
-                        <li>
-                          <a class="tw-text-lg text-white text-decoration-none" href="#about"
-                            >About,
-                          </a>
-                        </li>
-                        <li>
-                          <a class="tw-text-lg text-white text-decoration-none" href="#skills"
-                            >Skills,
-                          </a>
-                        </li>
-                        <li>
-                          <a class="tw-text-lg text-white text-decoration-none" href="#projects"
-                            >Projects,
-                          </a>
-                        </li>
-                        <li>
-                          <a class="tw-text-lg text-white text-decoration-none" href="#achievements"
-                            >Achievements,
-                          </a>
-                        </li>
-                        <li>
-                          <a class="tw-text-lg text-white text-decoration-none" href="#certifications"
-                            >Certifications,
-                          </a>
-                        </li>
-                        <li>
-                          <a class="tw-text-lg text-white text-decoration-none" href="#contact"
-                            >Contact
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
                     <div
                       data-aos="fade-up"
                       data-aos-duration="1000"
@@ -1761,10 +2088,10 @@
                       data-aos-duration="1000"
                       data-aos-delay="400"
                     >
-                      <h4 class="tw-text-2xl text-white tw-mb-2 text-uppercase">
+                      <h4 class="tw-text-2xl text-white tw-mb-2">
                         Aryan Jha
                       </h4>
-                      <p class="tw-text-lg text-white mb-0">
+                      <p class="tw-text-lg text-white">
                         © 2026 Aryan Jha. All rights reserved.
                       </p>
                     </div>
@@ -1778,8 +2105,8 @@
               <div class="row">
                 <div class="col-xl-12">
                   <div class="footer-three-bottom text-center">
-                    <h5 class="footer-three-bottom-title text-white text-uppercase">
-                      ARYAN JHA
+                    <h5 class="footer-three-bottom-title text-white">
+                      Aryan Jha
                     </h5>
                   </div>
                 </div>
@@ -1794,9 +2121,10 @@
             />
           </div>
         </section>
-        <!-- ==================== Contact Section End ==================== -->
+        <!-- ==================== Contact & Footer Section End ==================== -->
       </div>
     </div>
+
     <!-- Jquery js -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <!-- phosphor Js -->
